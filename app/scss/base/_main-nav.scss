@@ -12,26 +12,8 @@
 
     text-align: center;
 
-    will-change: transform, opacity;
-    transform: translate3d(0, -100%, 0);
-
-    animation: slideNavDown 1s ease;
-    animation-fill-mode: both;
-
     @media (min-width: $screen-md) {
         padding-bottom: 0;
-    }
-}
-
-@keyframes slideNavDown {
-    from {
-        transform: translate3d(0, -100%, 0);
-        opacity: 0;
-    }
-
-    to {
-        transform: translate3d(0, 0, 0);
-        opacity: 1;
     }
 }
 
@@ -95,9 +77,28 @@
     }
 }
 
+.main-nav__item--top-fade {
+    opacity: 0;
 
-/* Dark
-   ========================================================================== */
+    will-change: transform, opacity;
+    transform: translate3d(0, -100%, 0);
+
+    animation: slideNavItemDown 1s ease;
+    animation-fill-mode: both;
+}
+
+@keyframes slideNavItemDown {
+from {
+    transform: translate3d(0, -100%, 0);
+    opacity: 0;
+}
+
+to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+}
+
 .main-nav__item--dark-bg {
     color: #4C4D59;
 
