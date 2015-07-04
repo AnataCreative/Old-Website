@@ -5,9 +5,50 @@
 /* General
    ========================================================================== */
 .home-container {
+    position: relative;
+
     width: 100vw;
     height: 100vh;
     overflow: hidden;
 
     background: $black;
+}
+
+
+/* Logo
+   ========================================================================== */
+.home-container__logo {
+    position: absolute;
+    top: 50vh;
+    left: 50%;
+
+    display: block;
+    margin: 0;
+    width: 10rem;
+
+    opacity: 0;
+
+    transform: translate3d(-50%, .8rem, 0);
+
+    will-change: transform, opacity;
+
+    animation: slideInLogo 3s ease;
+    animation-fill-mode: both;
+}
+
+@keyframes slideInLogo {
+    from {
+        transform: translate3d(-50%, .8rem, 0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate3d(-50%, 0, 0);
+        opacity: 1;
+    }
+}
+
+.home-container__logo__img {
+    display: block;
+    width: 100%;
 }

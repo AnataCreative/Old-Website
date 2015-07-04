@@ -5,8 +5,12 @@
 /* General
    ========================================================================== */
 .main-nav {
+    position: relative;
+
     padding: 0 .5em;
     overflow: hidden;
+
+    text-align: center;
 
     will-change: transform, opacity;
     transform: translate3d(0, -100%, 0);
@@ -56,6 +60,36 @@
 
 .main-nav__item--active {
     color: $black;
+}
+
+.main-nav__item--home {
+    display: block;
+    width: 1rem;
+    margin: 1rem auto .5rem;
+    padding: 0;
+
+    opacity: .3;
+
+    transition: opacity .8s ease;
+
+    img {
+        display: block;
+        width: 1rem;
+    }
+
+    &:hover, &:focus {
+        opacity: 1;
+    }
+
+    @media (min-width: $screen-md) {
+        position: absolute;
+        top: .5rem;
+        left: 50%;
+
+        margin: 0;
+
+        transform: translateX(-50%);
+    }
 }
 
 
