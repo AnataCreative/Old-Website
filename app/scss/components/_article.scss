@@ -32,9 +32,13 @@
 /* Header
    ========================================================================== */
 .article__header {
-    margin: 4rem 0 2rem;
+    margin: 1rem 0;
 
     text-align: center;
+
+    @media (min-width: $screen-md) {
+        margin: 4rem 0 2rem;
+    }
 }
 
 

@@ -7,7 +7,7 @@
 .main-nav {
     position: relative;
 
-    padding: 0 .5em;
+    padding: 0 .5em 4em .5em;
     overflow: hidden;
 
     text-align: center;
@@ -17,6 +17,10 @@
 
     animation: slideNavDown 1s ease;
     animation-fill-mode: both;
+
+    @media (min-width: $screen-md) {
+        padding-bottom: 0;
+    }
 }
 
 @keyframes slideNavDown {
@@ -63,14 +67,19 @@
 }
 
 .main-nav__item--home {
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+
     display: block;
     width: 1rem;
-    margin: 1rem auto .5rem;
+    margin: 0;
     padding: 0;
 
     opacity: .3;
 
     transition: opacity .8s ease;
+    transform: translateX(-50%);
 
     img {
         display: block;
@@ -82,13 +91,7 @@
     }
 
     @media (min-width: $screen-md) {
-        position: absolute;
         top: .5rem;
-        left: 50%;
-
-        margin: 0;
-
-        transform: translateX(-50%);
     }
 }
 
