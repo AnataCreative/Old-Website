@@ -1,0 +1,43 @@
+/* ==========================================================================
+   Particle Js
+   ========================================================================== */
+
+/* General
+   ========================================================================== */
+.article {
+    padding: 0 2em;
+}
+
+.article--ani-in {
+    will-change: transform, opacity;
+    transform: translate3d(0, 1rem, 0);
+
+    animation: slideInArticle 2s ease;
+    animation-fill-mode: both;
+}
+
+@keyframes slideInArticle {
+    from {
+        transform: translate3d(0, 1rem, 0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+
+/* Header
+   ========================================================================== */
+.article__header {
+    margin: 4rem 0 2rem;
+    text-align: center;
+}
+
+
+.article__narrow-container {
+    max-width: 25rem;
+    margin: 0 auto;
+}

@@ -16,7 +16,7 @@ html, body {
 }
 
 html {
-    font-size: calc(#{$text-size--base} + .2vh + .2vw);
+    font-size: calc(#{$text-size--base} + .1vh + .1vw);
 
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
