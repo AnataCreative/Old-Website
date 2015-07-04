@@ -9,7 +9,9 @@ anatacreative.app = function(undefined) {
 
     // Particles
     homeParticles = function() {
-        particlesJS.load('home-container', '/particles.json');
+        particlesJS.load('home-container', '/particles.json', function() {
+            document.getElementById('home-container').classList.add('particles-js-ready');
+        });
     };
 
 
