@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Startkit
+   Anata Creative
    ========================================================================== */
 
 var anatacreative = anatacreative || {};
@@ -21,6 +21,10 @@ anatacreative.app = function(undefined) {
     }();
 };
 
-document.addEventListener('DOMContentLoaded', function(event) {
+if (document.readyState == 'complete') {
     anatacreative.app();
-});
+} else {
+    document.addEventListener('DOMContentLoaded', function(event) {
+        anatacreative.app();
+    });
+}
