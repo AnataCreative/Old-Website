@@ -21,10 +21,4 @@ anatacreative.app = function(undefined) {
     }();
 };
 
-if (document.readyState == 'complete') {
-    anatacreative.app();
-} else {
-    document.addEventListener('DOMContentLoaded', function(event) {
-        anatacreative.app();
-    });
-}
+anatacreative.app();
