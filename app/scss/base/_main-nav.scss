@@ -1,0 +1,66 @@
+/* ==========================================================================
+   Main Navigation
+   ========================================================================== */
+
+/* General
+   ========================================================================== */
+.main-nav {
+    padding: 0 .5em;
+    overflow: hidden;
+
+    will-change: transform, opacity;
+    transform: translate3d(0, -100%, 0);
+
+    animation: slideNavDown 1s ease;
+    animation-fill-mode: both;
+}
+
+@keyframes slideNavDown {
+    from {
+        transform: translate3d(0, -100%, 0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+
+/* Item
+   ========================================================================== */
+.main-nav__item {
+    display: block;
+    padding: 1em;
+
+    color: $grey--text--light;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .6rem;
+
+    transition: color .3s ease;
+
+    &:hover, &:focus {
+        color: $black;
+    }
+}
+
+.main-nav__item--left {
+    float: left;
+}
+
+.main-nav__item--right {
+    float: right;
+}
+
+
+/* Dark
+   ========================================================================== */
+.main-nav__item--dark-bg {
+    color: #4C4D59;
+
+    &:hover, &:focus {
+        color: $white;
+    }
+}

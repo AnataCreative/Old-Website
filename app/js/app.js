@@ -2,21 +2,20 @@
    Startkit
    ========================================================================== */
 
-var startkit = startkit || {};
+var anatacreative = anatacreative || {};
 
 anatacreative.app = function(undefined) {
+    var homeParticles;
 
-    var exports = this.app;
-
-    // Public function
-    exports.publicFunction = function() {
-        // Public function
+    // Particles
+    homeParticles = function() {
+        particlesJS.load('home-container', '/particles.json');
     };
 
 
     // Init
     var init = function() {
-        // Init (self-executing function)
+        homeParticles();
     }();
 };
 
