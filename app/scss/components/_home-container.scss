@@ -28,7 +28,7 @@
 
     opacity: 0;
 
-    transform: translate3d(-50%, .8rem, 0);
+    transform: translate3d(-50%, -40%, 0);
 
     will-change: transform, opacity;
 
@@ -38,12 +38,12 @@
 
 @keyframes slideInLogo {
     from {
-        transform: translate3d(-50%, .8rem, 0);
+        transform: translate3d(-50%, -40%, 0);
         opacity: 0;
     }
 
     to {
-        transform: translate3d(-50%, 0, 0);
+        transform: translate3d(-50%, -50%, 0);
         opacity: 1;
     }
 }
