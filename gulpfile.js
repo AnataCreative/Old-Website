@@ -135,7 +135,7 @@ gulp.task('scripts', function() {
         })
 
         // Concat
-        .pipe(plugins.concat('footer.min.js'))
+        .pipe(plugins.concat('app.min.js'))
 
         // Set destination
         .pipe(gulp.dest(config.dist.js))
