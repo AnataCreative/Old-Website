@@ -18,6 +18,7 @@
 /* Logo
    ========================================================================== */
 .home-container__logo {
+    z-index: 100;
     position: absolute;
     top: 50vh;
     left: 50%;
@@ -28,7 +29,7 @@
 
     opacity: 0;
 
-    transform: translate3d(-50%, -40%, 0);
+    transform: translate3d(-50%, -50%, 0);
 
     will-change: transform, opacity;
 
@@ -38,7 +39,7 @@
 
 @keyframes slideInLogo {
     from {
-        transform: translate3d(-50%, -40%, 0);
+        transform: translate3d(-50%, -45%, 0);
         opacity: 0;
     }
 
@@ -48,7 +49,11 @@
     }
 }
 
-.home-container__logo__img {
+.home-container__logo__img, .home-container__logo__img--creative {
     display: block;
     width: 100%;
+}
+
+.home-container__logo__img--creative {
+    margin-top: 1.5rem;
 }
