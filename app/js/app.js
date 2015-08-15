@@ -5,22 +5,11 @@
 var anatacreative = anatacreative || {};
 
 anatacreative.app = function(undefined) {
-    var homeParticles;
-
-
-    // Particles
-    homeParticles = function() {
-        if (document.getElementById('particle-container') !== null) {
-            particlesJS.load('particle-container', '/particles.json', function() {
-                document.getElementById('particle-container').classList.add('particles-js-ready');
-            });
-        }
-    };
-
+    var init;
 
     // Init
-    var init = function() {
-        homeParticles();
+    init = function() {
+        anatacreative.particles();
         //anatacreative.blog();
     }();
 };

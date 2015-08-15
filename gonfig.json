@@ -9,6 +9,7 @@
     "video": "<=resourcesPath>video/**/*.{webm,mp4}",
     "js": [
         "<=bowerComponentsPath>particles.js/particles.js",
+        "<=resourcesPath>js/particles.js",
         "<=resourcesPath>js/app.js"
     ],
 
