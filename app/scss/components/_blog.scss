@@ -94,3 +94,22 @@
     margin: 0 auto;
     width: rem-calc(18);
 }
+
+
+
+/* Codepen embed
+   ========================================================================== */
+.blog__codepen-embed {
+    margin: 4rem 0;
+    background: #eee;
+
+    .codepen {
+        padding: 2em;
+        text-align: center;
+        color: #bbb;
+
+        a {
+            color: #bbb;
+        }
+    }
+}
