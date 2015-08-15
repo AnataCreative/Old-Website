@@ -114,7 +114,7 @@ to {
 .main-nav__item--white {
     color: rgba(255, 255, 255, .7);
 
-    &:hover, &:focus {
+    &:hover, &:focus, &.main-nav__item--active {
         color: rgba(255, 255, 255, 1);
     }
 }

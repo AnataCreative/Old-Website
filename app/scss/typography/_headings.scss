@@ -5,7 +5,7 @@
 
 /* Shared
    ========================================================================== */
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
     margin: 1.5rem 0 1rem;
 
     font-family: $font-family--headers;
@@ -17,6 +17,11 @@ h1, h2, h3, h4, h5, h6 {
     + p {
         margin-top: 0;
     }
+}
+
+h3, h4, h5, h6 {
+    font-family: $font-family--base;
+    line-height: 1.6;
 }
 
 
@@ -39,10 +44,12 @@ h2 {
 }
 
 h3 {
-    font-size: 1.1rem;
+    font-size: rem-calc(14);
+    text-transform: uppercase;
+    color: #7a7a7a;
 
     @media (min-width: $screen-md) {
-        font-size: 1.3rem;
+        font-size: rem-calc(14);
     }
 }
 
