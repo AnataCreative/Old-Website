@@ -8,6 +8,10 @@
     padding: 0 2em;
 }
 
+.article--full {
+    padding: 0;
+}
+
 .article--ani-in {
     will-change: transform, opacity;
     transform: translate3d(0, 1rem, 0);

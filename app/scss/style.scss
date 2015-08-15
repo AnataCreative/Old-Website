@@ -13,6 +13,11 @@
 @import "config/config";
 
 
+/* Functions
+   ========================================================================== */
+@import "functions/rem-calc";
+
+
 /* Base
    ========================================================================== */
 @import "base/base",
@@ -31,5 +36,7 @@
    ========================================================================== */
 @import "components/anata",
         "components/home-container",
-        "components/particle-js",
-        "components/article";
+        "components/particle-container",
+        "components/article",
+        "components/blog-nav",
+        "components/blog-header";

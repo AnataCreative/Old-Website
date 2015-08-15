@@ -1,12 +1,28 @@
 /* ==========================================================================
-   Particle Js
+   Home Container
    ========================================================================== */
 
 /* General
    ========================================================================== */
-.particles-js-canvas-el {
-    opacity: 0;
+.particle-container {
+    position: relative;
 
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+/* Canvas El
+   ========================================================================== */
+.particles-js-canvas-el {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
     transition: opacity 3s ease;
 }
 

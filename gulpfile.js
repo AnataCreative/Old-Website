@@ -92,10 +92,7 @@ var errorLogger = function(headerMessage, errorMessage) {
 gulp.task('styles', function() {
     return gulp.src(config.scss)
         // Sass
-        .pipe(plugins.sass())
-        .on('error', function(err) {
-            errorLogger('SASS Compilation Error', err.message);
-        })
+        .pipe(plugins.sass().on('error', plugins.sass.logError))
 
         // Combine Media Queries
         .pipe(plugins.combineMq())

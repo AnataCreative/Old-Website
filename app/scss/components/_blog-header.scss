@@ -1,0 +1,42 @@
+/* ==========================================================================
+   Blog - Header
+   ========================================================================== */
+
+.blog {
+
+}
+
+
+/* General
+   ========================================================================== */
+.blog__header {
+    display: flex;
+    align-items: center;
+
+    margin: -#{rem-calc(40)} 0 rem-calc(20);
+
+    background: #f2b65f;
+    text-align: center;
+
+    @media (min-width: $screen-md) {
+        margin: -#{rem-calc(40)} 0 rem-calc(40);
+    }
+}
+
+
+/* Head
+   ========================================================================== */
+.blog__header__head {
+    width: 100%;
+    text-align: center;
+
+    color: $white;
+}
+
+.blog__header__head--ani-in {
+    will-change: transform, opacity;
+    transform: translate3d(0, 1rem, 0);
+
+    animation: slideInArticle 2s ease;
+    animation-fill-mode: both;
+}

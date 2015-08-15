@@ -5,6 +5,7 @@
 /* General
    ========================================================================== */
 .main-nav {
+    z-index: 100;
     position: relative;
 
     padding: 0 .5em 4em .5em;
@@ -13,6 +14,7 @@
     text-align: center;
 
     @media (min-width: $screen-md) {
+        height: rem-calc(40);
         padding-bottom: 0;
     }
 }
@@ -104,5 +106,14 @@ to {
 
     &:hover, &:focus {
         color: $white;
+    }
+}
+
+
+.main-nav__item--white {
+    color: rgba(255, 255, 255, .7);
+
+    &:hover, &:focus {
+        color: rgba(255, 255, 255, 1);
     }
 }
