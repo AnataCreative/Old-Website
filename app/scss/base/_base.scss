@@ -171,7 +171,8 @@ sub {
  */
 
 img {
-  border: 0;
+    max-width: 100%;
+    border: 0;
 }
 
 /**
@@ -179,7 +180,7 @@ img {
  */
 
 svg:not(:root) {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 /* Grouping content
@@ -190,7 +191,11 @@ svg:not(:root) {
  */
 
 figure {
-  margin: 1em 40px;
+    margin: 1.3rem 0 2.2rem;
+
+    img {
+        display: block;
+    }
 }
 
 /**
@@ -414,4 +419,3 @@ td,
 th {
   padding: 0;
 }
-

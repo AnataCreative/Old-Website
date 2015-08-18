@@ -44,17 +44,7 @@
     stroke-dasharray: 2600;
     stroke-dashoffset: 2600;
     stroke-width: 40;
-    animation: anata-n 1.5s linear forwards .8s;
-}
-
-@keyframes anata-n {
-    0% {
-        stroke-dashoffset: 2600;
-    }
-
-    100% {
-        stroke-dashoffset: 0;
-    }
+    animation: anata-other-letters 1.5s linear forwards .8s;
 }
 
 
@@ -62,17 +52,7 @@
     stroke-dasharray: 2600;
     stroke-dashoffset: 2600;
     stroke-width: 40;
-    animation: anata-a-2 1.5s linear forwards 1.1s;
-}
-
-@keyframes anata-a-2 {
-    0% {
-        stroke-dashoffset: 2600;
-    }
-
-    100% {
-        stroke-dashoffset: 0;
-    }
+    animation: anata-other-letters 1.5s linear forwards 1.1s;
 }
 
 
@@ -80,17 +60,7 @@
     stroke-dasharray: 2600;
     stroke-dashoffset: 2600;
     stroke-width: 40;
-    animation: anata-t 1.5s linear forwards 1.3s;
-}
-
-@keyframes anata-t {
-    0% {
-        stroke-dashoffset: 2600;
-    }
-
-    100% {
-        stroke-dashoffset: 0;
-    }
+    animation: anata-other-letters 1.5s linear forwards 1.3s;
 }
 
 
@@ -98,10 +68,10 @@
     stroke-dasharray: 2600;
     stroke-dashoffset: 2600;
     stroke-width: 40;
-    animation: anata-a-3 1.5s linear forwards 1.6s;
+    animation: anata-other-letters 1.5s linear forwards 1.6s;
 }
 
-@keyframes anata-a-3 {
+@keyframes anata-other-letters {
     0% {
         stroke-dashoffset: 2600;
     }
