@@ -8,16 +8,25 @@
     z-index: 100;
     position: relative;
 
-    height: rem-calc(105);
-    padding: 0 .5em 4em .5em;
-    overflow: hidden;
+    height: rem-calc(80);
+    padding: 1em .5em 1em .5em;
+    overflow: auto;
 
     text-align: center;
 
     @media (min-width: $screen-md) {
+        overflow: hidden;
         height: rem-calc(40);
-        padding-bottom: 0;
+        padding: 0 .5em 0 .5em;
     }
+}
+
+.main-nav__left {
+    float: left;
+}
+
+.main-nav__right {
+    float: right;
 }
 
 
@@ -25,7 +34,7 @@
    ========================================================================== */
 .main-nav__item {
     display: block;
-    padding: 1em;
+    padding: .5em 1em;
 
     color: $grey--text--light;
     text-decoration: none;
@@ -37,14 +46,19 @@
     &:hover, &:focus {
         color: $black;
     }
+
+    @media (min-width: $screen-md) {
+        display: inline-block;
+        padding: 1em;
+    }
 }
 
 .main-nav__item--left {
-    float: left;
+    text-align: left;
 }
 
 .main-nav__item--right {
-    float: right;
+    text-align: right;
 }
 
 .main-nav__item--active {
@@ -53,7 +67,7 @@
 
 .main-nav__item--home {
     position: absolute;
-    top: 4rem;
+    top: 1.8rem;
     left: 50%;
 
     display: block;
@@ -76,7 +90,9 @@
     }
 
     @media (min-width: $screen-md) {
+        display: block;
         top: .5rem;
+        padding: 0;
     }
 }
 

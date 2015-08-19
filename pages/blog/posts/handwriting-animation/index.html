@@ -17,10 +17,14 @@
 <body>
     <main role="main" class="blog">
         <nav role="navigation" class="main-nav">
-            <a href="/pages/about/" class="main-nav__item main-nav__item--left main-nav__item--top-fade main-nav__item--white">About</a>
-            <a href="/pages/blog/" class="main-nav__item main-nav__item--left main-nav__item--top-fade main-nav__item--white main-nav__item--active">Blog</a>
-            <a href="https://twitter.com/anatacreative" class="main-nav__item main-nav__item--right main-nav__item--top-fade main-nav__item--white">Twitter</a>
-            <a href="https://instagram.com/anatacreative/" class="main-nav__item main-nav__item--right main-nav__item--top-fade main-nav__item--white">Instagram</a>
+            <div class="main-nav__left">
+                <a href="/pages/about/" class="main-nav__item main-nav__item--left main-nav__item--top-fade main-nav__item--white">About</a>
+                <a href="/pages/blog/" class="main-nav__item main-nav__item--left main-nav__item--top-fade main-nav__item--white main-nav__item--active">Blog</a>
+            </div>
+            <div class="main-nav__right">
+                <a href="https://twitter.com/anatacreative" class="main-nav__item main-nav__item--right main-nav__item--top-fade main-nav__item--white">Twitter</a>
+                <a href="https://instagram.com/anatacreative/" class="main-nav__item main-nav__item--right main-nav__item--top-fade main-nav__item--white">Instagram</a>
+            </div>
             <a href="/" class="main-nav__item main-nav__item--home">
                 <img src="/dist/img/anatacreative--small-simple--white.svg" alt="Anata Creative">
             </a>
@@ -38,7 +42,7 @@
 
 
             <p class="text--intro text--center">
-                A lot of work is being done for Anata behind the scenes. Exiting stuff, but not yet bloggable. What we can blog about, is how we made the handdrawing animation for our logo on the homepage. Let's get to it.
+                A lot of awesome work is being done for Anata behind the scenes. Exciting stuff, but not yet bloggable. What we can blog about, is how we made the handdrawing animation for our logo on the homepage. Let's get to it.
             </p>
 
 
@@ -56,7 +60,7 @@
                 </h2>
 
                 <p>
-                    The first step is quite straightforward. Just export your logo to SVG and copy the code over to your html-document. Clean up all unnecessary clutter and give every path a nice id.
+                    The first step is quite straightforward. Just export your logo to SVG and copy the SVG-code over to your html-document. Clean up all unnecessary clutter and give every path a nice id.
                 </p>
             </section>
 <pre class="language-markup"><code>
@@ -75,11 +79,14 @@
                     Step 2: Storing the path’s inside clip-paths
                 </h2>
                 <p>
-                    The next step is to store our paths inside clip-paths. We will store them in the <strong>defs</strong> element inside the SVG.
+                    The next step is to store our paths inside clip-paths for later use. We use clip-paths to make sure that in our next step, the painting animation will be restricted to the bounds of our letters.
+                </p>
+                <p>
+                    We will store the clip-paths in a <strong>defs</strong> element inside the SVG.
                     Defining our clip-paths inside a defs element promotes understandability of the SVG content and thus promotes accessibility.
                 </p>
                 <p>
-                    We use clip-paths to make sure that in our next step, the painting animation will be restricted to the bounds of our letters.
+
                 </p>
                 <p>
                     <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/defs">More info about defs</a>.<br>
@@ -120,22 +127,22 @@
                     <img src="img/svg-screen-1.jpg" alt="path alongside A, with logo still present">
                 </figure>
                 <p>
-                    Now remove everything except the path you just drawn.
+                    Next remove everything except the path you just drawn.
                 </p>
                 <figure>
                     <img src="img/svg-screen-2.jpg" alt="path alongside A, without the logo">
                 </figure>
                 <p>
-                    Then save the file as SVG, but just use the "SVG Code..." button to get the path, you don't really need to save the file.
+                    Then save the file as SVG, but just use the "SVG Code..." button to get the code of the path. You don't really need to save the file.
                 </p>
                 <figure>
                     <img src="img/svg-screen-3.jpg" alt="save as svg">
                 </figure>
                 <p>
-                    If you have done this with Illustrator, the change is big that you will get a polyline instead of a path. No worries though, we can easely change a polyline to a path by changing a few things.
+                    If you have done this with Illustrator, the chance is big that you'll get a polyline instead of a path. No worries though, we can easely convert a polyline to a path just by changing a few things.
                 </p>
                 <p>
-                    First of all, let's change the name of the element from polyline to path. Next up, we change the points=" attribute to d=". And for the last step, just place a capital M before the numbers. We now have a supa awesome path instead of a polyline.
+                    First of all, let's change the name of the element from polyline to path. Next up, we change the points=" attribute to d=". And for the last step, just place a capital M before the numbers.
                 </p>
             </section>
 <pre class="language-markup"><code>
@@ -145,14 +152,14 @@
 </code></pre>
             <section class="row">
                 <p>
-                    Now store your path inside the SVG under a g element. Add a stroke-width attribute on your g element depending on the width of your graphic. Then define your clip-path on the g element.
+                    Now store your path inside a g element. Add a stroke-width attribute on your g element depending on the width of your graphic. Then define your clip-path on the g element.
                     Point towards the ID of the clippath you stored in your defs corrisponding to your current letter.
                 </p>
                 <p>
                     Add a class to your path. We will use this in the next step to attatch some CSS to it. Remove the fill, add a stroke color and define the stroke-miterlimit.
                 </p>
                 <p>
-                    Strike miterlimit can be unknow for some. The docs state:
+                    Stroke miterlimit can be unknow for some. The docs state:
                     "The stroke-miterlimit imposes a limit on the ratio of the miter length to the stroke-width. When the limit is exceeded, the join is converted from a miter to a bevel." - <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-miterlimit">Read more about stroke-miterlimit.</a>
                 </p>
             </section>
