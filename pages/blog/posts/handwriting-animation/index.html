@@ -76,7 +76,7 @@
 
             <section class="row">
                 <h2>
-                    Step 2: Storing the path’s inside clip-paths
+                    Step 2: Storing the paths inside clip-paths
                 </h2>
                 <p>
                     The next step is to store our paths inside clip-paths for later use. We use clip-paths to make sure that in our next step, the painting animation will be restricted to the bounds of our letters.
@@ -118,7 +118,7 @@
 
             <section class="row">
                 <h2>
-                    Step 3: Create the path’s for the animation
+                    Step 3: Create the paths for the animation
                 </h2>
                 <p>
                     Now that we have our clip-paths neatly stored in our SVG, it's time to draw the path for the animation. We go back to our SVG in Illustrator (or any other editor) and draw a nice path trough our fist letter, in this case the A.
@@ -153,7 +153,7 @@
             <section class="row">
                 <p>
                     Now store your path inside a g element. Add a stroke-width attribute on your g element depending on the width of your graphic. Then define your clip-path on the g element.
-                    Point towards the ID of the clippath you stored in your defs corrisponding to your current letter.
+                    Point towards the ID of the clippath you stored in your defs corresponding to your current letter.
                 </p>
                 <p>
                     Add a class to your path. We will use this in the next step to attatch some CSS to it. Remove the fill, add a stroke color and define the stroke-miterlimit.
@@ -193,8 +193,8 @@
                     Step 4: Add some CSS to the mix
                 </h2>
                 <p>
-                    All the animation is done with CSS Animations. We will animate the strok-dashoffset of our path from 2600 (just pick a big number) to 0.
-                    To enforce the writing effect, we use an animation delay to let the elements wait for each other.
+                    All the animation is done with CSS Animations. We'll animate the strok-dashoffset of our path from 2600 (just pick a big number) to 0.
+                    To enforce the writing effect, we'll use an animation delay to let the elements wait for each other.
                 </p>
             </section>
 <pre class="language-css"><code>
