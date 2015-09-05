@@ -34,10 +34,12 @@
 
 /* Components
    ========================================================================== */
-@import "components/anata",
+@import "components/body",
+        "components/anata",
         "components/home-container",
         "components/particle-container",
         "components/article",
+        "components/about",
         "components/blog-nav",
         "components/blog";
 
