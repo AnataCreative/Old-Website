@@ -14,12 +14,10 @@
     align-items: center;
 
     height: rem-calc(360);
-    margin: -#{rem-calc(80)} 0 rem-calc(20);
+    margin: -#{rem-calc(90)} 0 rem-calc(20);
 
     background: #f2b65f;
     text-align: center;
-
-    clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 50% 100%, 0% 70%);
 
     @media (min-width: $screen-md) {
         height: 96vh;
@@ -34,14 +32,12 @@
     display: block;
     width: 100%;
     padding: 0 2rem;
-    margin-top: -5vh;
+    margin: 0;
 
     text-align: center;
     color: $white;
 
     @media (min-width: $screen-md) {
-        margin-top: -15vh;
-
         font-size: 5vw;
     }
 }
