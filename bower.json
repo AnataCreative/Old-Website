@@ -2,6 +2,7 @@
     "name": "AnataCreative",
     "version": "1.0.0",
     "dependencies": {
-        "particles.js": "2.0"
+        "velocity": "latest",
+        "bootstrap": "4.0.0-alpha"
     }
 }

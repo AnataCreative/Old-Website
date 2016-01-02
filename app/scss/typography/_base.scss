@@ -11,13 +11,12 @@
 
 html, body {
     font-family: $font-family--base;
+    font-size: $text-size--base;
     line-height: $line-height--base;
     color: $black;
 }
 
 html {
-    font-size: calc(#{$text-size--base} + .1vh + .1vw);
-
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }

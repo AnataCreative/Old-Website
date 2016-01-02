@@ -5,10 +5,9 @@
 
 /* Shared
    ========================================================================== */
-h1, h2 {
-    margin: 1.5rem 0 1rem;
+h1, h2, h3, h4, h5, h6 {
+    margin: 1.5rem 0 .8rem;
 
-    font-family: $font-family--headers;
     font-weight: 400;
     line-height: $line-height--headers;
 
@@ -19,60 +18,49 @@ h1, h2 {
     }
 }
 
-h3, h4, h5, h6 {
-    font-family: $font-family--base;
-    line-height: 1.6;
-}
-
 
 /* Specific
    ========================================================================== */
 h1 {
-    font-size: 1.8rem;
+    font-size: rem-calc(26);
 
-    @media (min-width: $screen-md) {
-        font-size: 2rem;
+    @include media-breakpoint-up(md) {
+        font-size: rem-calc(30);
     }
 }
 
 h2 {
-    font-size: 1.2rem;
+    font-size: rem-calc(24);
 
-    @media (min-width: $screen-md) {
-        font-size: 1.5rem;
+    @include media-breakpoint-up(md) {
+        font-size: rem-calc(26);
     }
 }
 
 h3 {
-    font-size: rem-calc(14);
-    text-transform: uppercase;
-    color: #7a7a7a;
+    font-size: rem-calc(20);
 
-    @media (min-width: $screen-md) {
-        font-size: rem-calc(14);
+    @include media-breakpoint-up(md) {
+        font-size: rem-calc(24);
     }
 }
 
 h4 {
-    font-size: 1rem;
+    font-size: rem-calc(18);
 
-    @media (min-width: $screen-md) {
-        font-size: 1.3rem;
+    @include media-breakpoint-up(md) {
+        font-size: rem-calc(20);
     }
 }
 
 h5 {
-    font-size: 1rem;
+    font-size: rem-calc(16);
 
-    @media (min-width: $screen-md) {
-        font-size: 1.1rem;
+    @include media-breakpoint-up(md) {
+        font-size: rem-calc(18);
     }
 }
 
 h6 {
-    font-size: .9rem;
-
-    @media (min-width: $screen-md) {
-        font-size: 1rem;
-    }
+    font-size: rem-calc(16);
 }

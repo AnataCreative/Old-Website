@@ -33,9 +33,6 @@ var runSequence = require('run-sequence');
 // Del
 var del = require('del');
 
-// Load the notifier.
-var Notifier = require('node-notifier');
-
 // Chalk for the errorlogger
 var chalk = require('chalk');
 
@@ -72,16 +69,6 @@ var errorLogger = function(headerMessage, errorMessage) {
     }
 
     plugins.util.log('\n' + chalk.red(boxLines + '\n# ') + headerMessage + chalk.red(' #\n' + boxLines) + '\n ' + chalk.blue(errorMessage) + '\n');
-
-    if (config.showErrorNotifications) {
-        var notifier = new Notifier();
-
-        notifier.notify({
-            'title': headerMessage,
-            'message': errorMessage,
-            'contentImage':  __dirname + "/gulp_error.jpg"
-        });
-    }
 };
 
 
@@ -92,7 +79,10 @@ var errorLogger = function(headerMessage, errorMessage) {
 gulp.task('styles', function() {
     return gulp.src(config.scss)
         // Sass
-        .pipe(plugins.sass().on('error', plugins.sass.logError))
+        .pipe(plugins.sass()).on('error', function(err) {
+            errorLogger('Styles Error', err);
+            this.emit('end');
+        })
 
         // Combine Media Queries
         .pipe(plugins.combineMq())
@@ -126,13 +116,13 @@ gulp.task('scripts', function() {
             mangle: {
                 except: ['jQuery']
             }
-        }))
-        .on('error', function(err) {
-            errorLogger('Javascript Error', err.message);
+        })).on('error', function(err) {
+            errorLogger('Javascript Error', err);
+            this.emit('end');
         })
 
         // Concat
-        .pipe(plugins.concat('app.min.js'))
+        .pipe(plugins.concat('footer.min.js'))
 
         // Set destination
         .pipe(gulp.dest(config.dist.js))
@@ -140,6 +130,29 @@ gulp.task('scripts', function() {
         // Show total size of js
         .pipe(plugins.size({
             title: 'js'
+        }));
+});
+
+
+// JS - Other
+gulp.task('other-scripts', function() {
+    return gulp.src(config.otherJs)
+        // Uglify
+        .pipe(plugins.uglify({
+            mangle: {
+                except: ['jQuery']
+            }
+        })).on('error', function(err) {
+            errorLogger('Javascript Error', err);
+            this.emit('end');
+        })
+
+        // Set destination
+        .pipe(gulp.dest(config.dist.js))
+
+        // Show total size of js
+        .pipe(plugins.size({
+            title: 'js - other'
         }));
 });
 
@@ -169,15 +182,39 @@ gulp.task('images', function() {
 });
 
 
+// Templates
+gulp.task('templates', function() {
+    plugins.nunjucksRender.nunjucks.configure(['app/templates/'], {watch: false});
+
+    return gulp.src('app/templates/pages/*.html')
+        // Render
+        .pipe(plugins.nunjucksRender())
+
+        // Minify html
+        .pipe(plugins.htmlmin({
+            collapseWhitespace: true
+        }))
+
+        // Rename the file to respect naming covention.
+        .pipe(plugins.rename(function(path) {
+            path.basename = path.basename.split('.nunjucks')[0];
+            path.extname = ".html"
+        }))
+
+        // Set destination
+        .pipe(gulp.dest(config.dist.templates))
+});
+
+
 // Video
-gulp.task('video', function() {
-    return gulp.src(config.video)
+gulp.task('fonts', function() {
+    return gulp.src(config.fonts)
         // Set desitination
-        .pipe(gulp.dest(config.dist.video))
+        .pipe(gulp.dest(config.dist.fonts))
 
         // Show total size of files
         .pipe(plugins.size({
-            title: 'video'
+            title: 'fonts'
         }));
 });
 
@@ -201,7 +238,8 @@ gulp.task('watch', function() {
     gulp.watch(config.scss, ['styles']);
     gulp.watch(config.js, ['scripts']);
     gulp.watch(config.img, ['images']);
-    gulp.watch(config.video, ['video']);
+    gulp.watch(config.video, ['fonts']);
+    gulp.watch(config.templates, ['templates']);
 });
 
 
@@ -218,7 +256,7 @@ gulp.task('connect', function() {
 gulp.task('default', function(done) {
     runSequence(
         'clean',
-        ['styles', 'scripts', 'images', 'video'],
+        ['styles', 'scripts', 'other-scripts', 'images', 'fonts', 'templates'],
         ['connect', 'watch'],
     done);
 });
@@ -228,7 +266,7 @@ gulp.task('default', function(done) {
 gulp.task('build', function(done) {
     runSequence(
         'clean',
-        ['styles', 'scripts', 'images', 'video'],
+        ['styles', 'scripts', 'other-scripts', 'images', 'fonts', 'templates'],
     done);
 });
 
@@ -238,5 +276,14 @@ gulp.task('biuld', function(done) {
     gulp.start('build');
 });
 gulp.task('buil', function(done) {
+    gulp.start('build');
+});
+gulp.task('biuld', function(done) {
+    gulp.start('build');
+});
+gulp.task('buil', function(done) {
+    gulp.start('build');
+});
+gulp.task('buld', function(done) {
     gulp.start('build');
 });

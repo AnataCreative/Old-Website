@@ -1,0 +1,18 @@
+{% extends "layout.nunjucks.html" %}
+
+{% block header %}
+    <!-- Header -->
+    <header class="main-header">
+        <img src="img/general/header.jpg" alt="" class="main-header__bg">
+        <div class="container main-hader__container">
+            <h1 class="main-header__title">
+                Contact
+            </h1>
+        </div>
+    </header>
+
+    <!-- Nav -->
+    {% import 'macros/nav.nunjucks.html' as nav %}
+    {{nav.active('contact')}}
+
+{% endblock %}

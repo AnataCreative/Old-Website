@@ -5,8 +5,12 @@
    Never add styles directly to this file
    ========================================================================== */
 
-$black:                     #181c21;
-$white:                     #fff;
+$black:         #181c21;
+$white:         #fff;
 
-$grey--light:               #d8d8d8;
-$grey--text--light:         #b5b5b5;
+$grey:          #d8d8d8;
+
+$blue:          #5282E8;
+
+$link-color:            $blue;
+$link-color--hover:     darken($blue, 10%);

@@ -18,11 +18,20 @@
 @import "functions/rem-calc";
 
 
+/* Vendors
+   ========================================================================== */
+@import "vendors/bootstrap/imports";
+
+
+/* Helpers
+   ========================================================================== */
+@import "helpers/v-center";
+
+
 /* Base
    ========================================================================== */
 @import "base/base",
-        "base/grid",
-        "base/main-nav";
+        "base/scaffolding";
 
 
 /* Typography
@@ -34,17 +43,4 @@
 
 /* Components
    ========================================================================== */
-@import "components/body",
-        "components/anata",
-        "components/home-container",
-        "components/particle-container",
-        "components/article",
-        "components/about",
-        "components/project-page",
-        "components/blog-nav",
-        "components/blog";
-
-
-/* Vendors
-   ========================================================================== */
-@import "vendor/prism";
+@import "components/components";

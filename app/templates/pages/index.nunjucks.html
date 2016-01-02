@@ -1,0 +1,12 @@
+{% extends "layout.nunjucks.html" %}
+
+{% block header %}
+    <h1>
+        Homepage
+    </h1>
+
+    <!-- Nav -->
+    {% import 'macros/nav.nunjucks.html' as nav %}
+    {{nav.active('home')}}
+
+{% endblock %}

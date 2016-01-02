@@ -4,32 +4,33 @@
         "resourcesPath": "app/"
     },
 
+    "templates": "<=resourcesPath>templates/**/*.html",
     "scss": "<=resourcesPath>scss/**/*.scss",
     "img": "<=resourcesPath>img/**/*.{png,jpg,jpeg,gif,svg,webp}",
-    "video": "<=resourcesPath>video/**/*.{webm,mp4}",
+    "fonts": "<=resourcesPath>fonts/**/*.{eot,ttf,woff,woff2}",
     "js": [
-        "<=bowerComponentsPath>particles.js/particles.js",
-        "<=resourcesPath>js/prism.js",
-        "<=resourcesPath>js/particles.js",
-        "<=resourcesPath>js/app.js"
+        "<=bowerComponentsPath>velocity/velocity.min.js",
+        "<=resourcesPath>js/components/*.js",
+        "<=resourcesPath>js/*.js"
     ],
+    "otherJs": "<=resourcesPath>js/other/*.js",
 
     "dist": {
+        "templates": "<=distPath>",
         "css": "<=distPath>css",
         "js": "<=distPath>js",
         "img": "<=distPath>img",
-        "video": "<=distPath>video"
+        "fonts": "<=distPath>fonts"
     },
 
     "browserSupport": [
-        "last 2 versions"
+        "last 2 versions",
+        "ie >= 9"
     ],
 
     "liveReloadFiles": [
         "<=distPath>css/style.min.css",
         "<=distPath>js/*.js",
-        "<=distPath>styleguide/css/style.min.css"
-    ],
-
-    "showErrorNotifications": "false"
+        "<=distPath>*.html"
+    ]
 }
