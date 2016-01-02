@@ -1,0 +1,79 @@
+/* ==========================================================================
+   Blocks - Buttons
+   ========================================================================== */
+
+/* General
+   ========================================================================== */
+.work-item {
+    position: relative;
+
+    display: block;
+    height: rem-calc(300);
+    margin: 0 0 rem-calc(100);
+
+    overflow: hidden;
+}
+
+.work-item--website-bieke {
+    background-color: #f3dff7;
+}
+
+
+/* Bg
+   ========================================================================== */
+.work-item__bg {
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: none;
+    max-height: none;
+
+    opacity: .14;
+
+    pointer-events: none;
+}
+
+
+/* Title
+   ========================================================================== */
+.work-item__title {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 100%;
+    max-width: rem-calc(400);
+    margin: 0;
+    padding: 0 rem-calc(10);
+
+    text-align: center;
+    color: $white;
+
+    transform: translate(-50%, -50%);
+}
+
+
+/* Main Visual
+   ========================================================================== */
+.work-item__main-visual {
+    z-index: 2;
+    position: absolute;
+    bottom: -#{rem-calc(35)};
+    right: rem-calc(80);
+
+    width: auto;
+    height: rem-calc(300);
+}
+
+
+/* Details
+   ========================================================================== */
+.work-item__details {
+    opacity: 0;
+}
