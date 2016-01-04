@@ -18,6 +18,10 @@
     background-color: #f3dff7;
 }
 
+.work-item--geboortekaartje-fries {
+    background-color: #E0FFB0;
+}
+
 
 /* Bg
    ========================================================================== */
@@ -56,6 +60,10 @@
     color: $white;
 
     transform: translate(-50%, -50%);
+
+    @include media-breakpoint-up(md) {
+        font-size: rem-calc(30);
+    }
 }
 
 
@@ -74,6 +82,68 @@
 
 /* Details
    ========================================================================== */
-.work-item__details {
+.work-item__visuals {
+    position: relative;
+    z-index: 2;
+
     opacity: 0;
+
+    // &:after {
+    //     content: '';
+    //
+    //     z-index: 3;
+    //     position: absolute;
+    //     bottom: -20px;
+    //     left: 0;
+    //
+    //     display: block;
+    //     width: 100%;
+    //     height: rem-calc(20);
+    //
+    //     box-shadow: 0 -12px rem-calc(24) rgba(0, 0, 0, .05);
+    // }
+}
+
+.work-item__visuals__info {
+    float: left;
+    width: 25%;
+    height: auto;
+    color: $white;
+
+    padding: 2em;
+}
+
+.work-item__visuals__scroll-container {
+    position: relative;
+    height: rem-calc(0);
+    overflow: scroll;
+}
+
+.work-item__visuals__item {
+    display: block;
+    width: 80%;
+    max-width: none;
+
+    box-shadow: 0 0 rem-calc(18) rgba(0, 0, 0, .11);
+
+    margin: rem-calc(60) auto;
+}
+
+
+/* Active
+   ========================================================================== */
+.work-item--active {
+    height: rem-calc(500);
+
+    .work-item__main-visual, .work-item__title {
+        opacity: 0;
+    }
+
+    .work-item__visuals__scroll-container {
+        height: rem-calc(500);
+    }
+
+    .work-item__visuals {
+        opacity: 1;
+    }
 }
