@@ -6,16 +6,112 @@
 /* Types
    ========================================================================== */
 .work-item--website-bieke {
+    background: #fafafa;
 
+    .work-item__title {
+        color: #d189d6;
+    }
+
+    .work-item__intro {
+        color: #a4a4a5;
+    }
+
+    .work-item__link {
+        color: $black;
+    }
+
+    .work-item__visual {
+        margin: -5rem 0 -85px;
+        padding: 0 0 0 rem-calc(30);
+    }
+
+    .work-item__visual__img {
+        max-width: rem-calc(400);
+    }
 }
 
 .work-item--geboorte-fries {
+    background: #c4e88d;
+    overflow: hidden;
 
+    .work-item__title {
+        color: $white;
+    }
+
+    .work-item__intro {
+        color: $white;
+    }
+
+    .work-item__link {
+        color: $white;
+    }
+
+    .work-item__visual {
+        margin: 2rem 0 -8rem;
+        padding: 0 rem-calc(30);
+    }
+
+    .work-item__visual__img {
+        max-width: rem-calc(300);
+    }
 }
+
 
 
 /* General
    ========================================================================== */
 .work-item {
+    padding: 4em rem-calc(30);
+}
 
+
+
+/* Title
+   ========================================================================== */
+.work-item__title {
+    margin: 0 0 3rem;
+
+    font-size: rem-calc(32);
+    font-weight: bold;
+}
+
+
+
+/* Intro
+   ========================================================================== */
+.work-item__intro {
+    margin: 0 0 3rem;
+
+    font-size: rem-calc(20);
+}
+
+
+
+/* Link
+   ========================================================================== */
+.work-item__link {
+    display: block;
+    padding: .4rem 0;
+
+    font-size: rem-calc(14);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: .1em;
+
+    &:hover, &:focus, &:active {
+        color: inherit;
+    }
+}
+
+
+
+/* Visual
+   ========================================================================== */
+.work-item__visual {
+
+}
+
+.work-item__visual__img {
+    width: 100%;
 }
