@@ -19,11 +19,12 @@
     .work-item__link {
         color: $black;
 
-        @include media-breakpoint-up(lg) {
+        &:hover, &:focus, &:active {
+            color: $black;
+        }
 
-            &:before {
-                background: #d189d6;
-            }
+        &:before {
+            background: #d189d6;
         }
     }
 
@@ -65,6 +66,14 @@
 
     .work-item__link {
         color: $white;
+
+        &:hover, &:focus, &:active {
+            color: $white;
+        }
+
+        &:before {
+            background: $white;
+        }
     }
 
     .work-item__visual {
@@ -166,10 +175,6 @@
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: .1em;
-
-    &:hover, &:focus, &:active {
-        color: inherit;
-    }
 
     @include media-breakpoint-up(md) {
         display: inline-block;
