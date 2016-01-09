@@ -3,18 +3,7 @@
 
 {% block header %}
     <!-- Header -->
-    <header class="home-header">
-        <h1 class="home-header__title">
-            {% include 'partials/logo/logo.nunjucks.html' %}
-            <span class="sr-only">Anata Creative</span>
-        </h1>
-
-        <h2 class="home-header__sub-title">
-            <span class="home-header__sub-title__part home-header__sub-title__part--1">We create</span>
-            <span class="home-header__sub-title__part home-header__sub-title__part--2">Handcrafted Websites</span>
-            <span class="home-header__sub-title__part home-header__sub-title__part--3">Awesome Illustrations</span>
-        </h2>
-    </header>
+    {% include 'partials/home/header.nunjucks.html' %}
 
     <!-- Nav -->
     {% import 'macros/nav.nunjucks.html' as nav %}

@@ -1,15 +1,17 @@
 /* ==========================================================================
-   Blocks - Links
+   Home Intro
    ========================================================================== */
 
 /* General
    ========================================================================== */
-a[href]:not([class]) {
-    color: $link-color;
-    text-decoration: none;
+.home-intro {
+    color: $black;
 
-    &:hover, &:focus, &:active {
-        text-decoration: none;
-        color: $link-color--hover;
+    @include media-breakpoint-up(sm) {
+
+    }
+
+    @include media-breakpoint-up(md) {
+
     }
 }
