@@ -1,10 +1,10 @@
 /* ==========================================================================
-   Startkit - Component
+   AnataCreative - Component
    ========================================================================== */
 
-var startkit = startkit || {};
+var anatacreative = anatacreative || {};
 
-startkit.component = function(undefined) {
+anatacreative.component = function(undefined) {
 
     var exports = this.component;
 

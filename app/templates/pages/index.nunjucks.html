@@ -1,12 +1,34 @@
 {% extends "layout.nunjucks.html" %}
 
+
 {% block header %}
-    <h1>
-        Homepage
-    </h1>
+    <!-- Header -->
+    <header class="home-header">
+        <h1 class="home-header__title">
+            {% include 'partials/logo/logo.nunjucks.html' %}
+            <span class="sr-only">Anata Creative</span>
+        </h1>
+
+        <h2 class="home-header__sub-title">
+            <span class="home-header__sub-title__part home-header__sub-title__part--1">We create</span>
+            <span class="home-header__sub-title__part home-header__sub-title__part--2">Handcrafted Websites</span>
+            <span class="home-header__sub-title__part home-header__sub-title__part--3">Awesome Illustrations</span>
+        </h2>
+    </header>
 
     <!-- Nav -->
     {% import 'macros/nav.nunjucks.html' as nav %}
     {{nav.active('home')}}
+{% endblock %}
 
+
+{% block content %}
+    <main role="main">
+        <!-- Intro -->
+        {% include 'partials/home/intro.nunjucks.html' %}
+
+        <!-- Projects -->
+        {% include 'partials/work/website-bieke.nunjucks.html' %}
+        {% include 'partials/work/geboorte-fries.nunjucks.html' %}
+    </main>
 {% endblock %}

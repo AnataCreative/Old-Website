@@ -1,10 +1,10 @@
 /* ==========================================================================
-   Startkit
+   Anata Creative
    ========================================================================== */
 
-var startkit = startkit || {};
+var anatacreative = anatacreative || {};
 
-startkit.app = function(undefined) {
+anatacreative.app = function(undefined) {
 
     var exports = this.app;
 
@@ -32,7 +32,7 @@ startkit.app = function(undefined) {
             ticking = false;
             var currentScrollY = latestKnownScrollY;
 
-            // startkit.component.updateScroll(currentScrollY);
+            // anatacreative.component.updateScroll(currentScrollY);
         };
 
         // scroll mousewheel wheel
@@ -50,7 +50,7 @@ startkit.app = function(undefined) {
 
     // Init
     var init = function() {
-        startkit.component();
+        anatacreative.component();
     }();
 };
 
@@ -69,10 +69,10 @@ var ready = function(fn) {
 };
 
 ready(function() {
-    startkit.app();
+    anatacreative.app();
 });
 
 
 window.onload = function() {
-    startkit.app.onload();
+    anatacreative.app.onload();
 };

@@ -1,7 +1,7 @@
 {% macro active(activePage='home') %}
-    <nav class="main-nav">
-        <a href="work.html" class="main-nav__item{%if activePage == 'work' %} main-nav__item--active{% endif %}">
-            Our work
+    <nav role="navigation" class="main-nav">
+        <a href="{%if activePage == 'home' %}#projects{% else %}//anatacreative.com#projects{% endif %}" class="main-nav__item">
+            Projects
         </a>
         <a href="contact.html" class="main-nav__item{%if activePage == 'contact' %} main-nav__item--active{% endif %}">
             Contact
