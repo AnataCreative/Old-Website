@@ -18,14 +18,10 @@
 @import "functions/rem-calc";
 
 
-/* Vendors
-   ========================================================================== */
-@import "vendors/bootstrap/imports";
-
-
 /* Helpers
    ========================================================================== */
-@import "helpers/v-center";
+@import "helpers/v-center",
+        "helpers/breakpoints";
 
 
 /* Base

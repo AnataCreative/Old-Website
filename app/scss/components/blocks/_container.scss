@@ -1,0 +1,22 @@
+/* ==========================================================================
+   Screenreaders
+   ========================================================================== */
+
+/* General
+   ========================================================================== */
+.container {
+    margin-left: auto;
+    margin-right: auto;
+
+    @include media-breakpoint-up(sm) {
+        max-width: rem-calc(660);
+    }
+
+    @include media-breakpoint-up(md) {
+        max-width: rem-calc(860);
+    }
+
+    @include media-breakpoint-up(lg) {
+        max-width: rem-calc(1060);
+    }
+}

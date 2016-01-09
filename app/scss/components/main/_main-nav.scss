@@ -24,6 +24,12 @@
 
     @include media-breakpoint-up(md) {
         padding: 1.5em 2em 1.3em;
+
+        transition: color .5s ease;
+
+        &:hover, &:focus {
+            color: $black;
+        }
     }
 
 }
