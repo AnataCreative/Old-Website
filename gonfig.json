@@ -5,6 +5,8 @@
     },
 
     "templates": "<=resourcesPath>templates/**/*.html",
+    "templateBase": "<=resourcesPath>templates/",
+    "templatePages": "<=resourcesPath>templates/pages/**/*.html",
     "scss": "<=resourcesPath>scss/**/*.scss",
     "img": "<=resourcesPath>img/**/*.{png,jpg,jpeg,gif,svg,webp}",
     "fonts": "<=resourcesPath>fonts/**/*.{eot,ttf,woff,woff2}",

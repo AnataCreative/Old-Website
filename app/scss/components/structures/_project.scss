@@ -1,0 +1,53 @@
+/* ==========================================================================
+   Project
+   ========================================================================== */
+
+/* General
+   ========================================================================== */
+.project {
+
+}
+
+
+
+/* Image
+   ========================================================================== */
+.project__header {
+    margin: 0;
+    padding: 2em 0 0;
+
+    font-size: rem-calc(50);
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+/* Intro
+   ========================================================================== */
+.project__intro {
+    max-width: rem-calc(660);
+    margin: 0 auto;
+    padding: 4em rem-calc(30) 6em;
+
+    font-size: rem-calc(20);
+    color: $black;
+    text-align: center;
+}
+
+
+
+/* Visuals
+   ========================================================================== */
+.project__visuals {
+    padding: 6em 2em;
+
+    background: #dfcae0;
+}
+
+.project__visuals__item {
+    max-width: rem-calc(1000);
+    margin: 0 auto 6rem;
+
+    // box-shadow: 0 0 1rem 5px rgba(0, 0, 0, .05);
+}

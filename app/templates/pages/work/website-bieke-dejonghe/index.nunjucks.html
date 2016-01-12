@@ -1,0 +1,45 @@
+{% extends "layout.nunjucks.html" %}
+
+
+{% block header %}
+    <!-- Header -->
+    <header class="project-header">
+        <figure>
+            <img src="" alt="" class="project-header__img">
+        </figure>
+    </header>
+
+    <!-- Nav -->
+    {% import 'macros/nav.nunjucks.html' as nav %}
+    {{nav.active('projects')}}
+{% endblock %}
+
+
+{% block content %}
+    <main role="main">
+        <article class="project">
+
+            <!-- Header -->
+            <header>
+                <h1 class="project__header">
+                    Biekedejonghe.be
+                </h1>
+            </header>
+
+
+            <!-- Intro -->
+            <p class="project__intro">
+                Together with Bieke, we created a website to boost her business. The goal is to lower the hurdle for potential clients to make an appointment and to boost work inquiries.
+            </p>
+
+
+            <!-- Pics -->
+            <figure class="project__visuals">
+                <img src="/dist/img/projects/bieke-website/visual-1.jpg" alt="" class="project__visuals__item">
+                <img src="/dist/img/projects/bieke-website/visual-2.jpg" alt="" class="project__visuals__item">
+                <img src="/dist/img/projects/bieke-website/visual-3.jpg" alt="" class="project__visuals__item">
+                <img src="/dist/img/projects/bieke-website/visual-4.jpg" alt="" class="project__visuals__item">
+            </figure>
+        </article>
+    </main>
+{% endblock %}

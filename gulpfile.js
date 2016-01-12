@@ -184,9 +184,9 @@ gulp.task('images', function() {
 
 // Templates
 gulp.task('templates', function() {
-    plugins.nunjucksRender.nunjucks.configure(['app/templates/'], {watch: false});
+    plugins.nunjucksRender.nunjucks.configure([config.templateBase], {watch: false});
 
-    return gulp.src('app/templates/pages/*.html')
+    return gulp.src(config.templatePages)
         // Render
         .pipe(plugins.nunjucksRender())
 

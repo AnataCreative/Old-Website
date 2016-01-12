@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Project Header
+   ========================================================================== */
+
+/* General
+   ========================================================================== */
+.project-header {
+    position: relative;
+    height: rem-calc(400);
+
+    overflow: hidden;
+
+    background: #dfcae0;
+}
+
+
+
+/* Image
+   ========================================================================== */
+.project-header__img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: block;
+    width: auto;
+    height: 115%;
+    max-width: none;
+    max-height: none;
+
+    transform: translate3d(-40%, 0, 0);
+}
