@@ -41,8 +41,9 @@
 
     width: 100%;
     margin: 0;
+    padding: 0 rem-calc(20);
 
-    font-size: 12vw;
+    font-size: rem-calc(30);
     line-height: 1.2;
     text-align: center;
     color: $white;
@@ -50,7 +51,7 @@
     transform: translate3d(-50%, -50%, 0);
 
     @include media-breakpoint-up(sm) {
-        font-size: rem-calc(64);
+        font-size: rem-calc(44);
     }
 
     @include media-breakpoint-up(md) {
@@ -116,5 +117,87 @@
         width: auto;
         max-height: 90vh;
         margin: 0 auto 6rem;
+    }
+}
+
+
+
+/* Footer
+   ========================================================================== */
+.project__footer {
+    position: relative;
+    height: rem-calc(400);
+
+    overflow: hidden;
+
+    background: $black;
+}
+
+.project__footer__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    color: $white;
+    text-decoration: none;
+
+    &:hover, &:focus, &:active {
+        color: $white;
+        text-decoration: none;
+        outline: 0;
+    }
+}
+
+.project__footer__title {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 100%;
+    margin: 0;
+    padding: 0 rem-calc(20);
+
+    font-size: rem-calc(30);
+    line-height: 1.2;
+    text-align: center;
+    color: $white;
+
+    transform: translate3d(-50%, -50%, 0);
+
+    @include media-breakpoint-up(sm) {
+        font-size: rem-calc(44);
+    }
+
+    @include media-breakpoint-up(md) {
+        font-size: rem-calc(72);
+    }
+}
+
+.project__footer__title__sm {
+    position: absolute;
+    top: -80%;
+    left: 0;
+
+    display: block;
+    width: 100%;
+
+    font-size: .15em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+
+    opacity: .1;
+
+    @include media-breakpoint-up(sm) {
+        top: -60%;
+    }
+
+    @include media-breakpoint-up(md) {
+        top: -40%;
     }
 }
