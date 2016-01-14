@@ -2,23 +2,60 @@
    Project
    ========================================================================== */
 
-/* General
+/* Header
    ========================================================================== */
-.project {
+// General
+.project__header {
+    position: relative;
+    height: rem-calc(400);
 
+    overflow: hidden;
+
+    background: $black;
 }
 
 
+// Image
+.project__header__img {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 50%;
 
-/* Image
-   ========================================================================== */
-.project__header {
+    display: block;
+    width: auto;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+
+    transform: translate3d(-50%, 0, 0);
+}
+
+
+// Title
+.project__header__title {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 100%;
     margin: 0;
-    padding: 2em 0 0;
 
-    font-size: rem-calc(50);
-    font-weight: bold;
+    font-size: 12vw;
+    line-height: 1.2;
     text-align: center;
+    color: $white;
+
+    transform: translate3d(-50%, -50%, 0);
+
+    @include media-breakpoint-up(sm) {
+        font-size: rem-calc(64);
+    }
+
+    @include media-breakpoint-up(md) {
+        font-size: rem-calc(72);
+    }
 }
 
 
@@ -26,13 +63,29 @@
 /* Intro
    ========================================================================== */
 .project__intro {
-    max-width: rem-calc(660);
+    max-width: rem-calc(860);
     margin: 0 auto;
-    padding: 4em rem-calc(30) 6em;
+    padding: 2em rem-calc(30);
 
-    font-size: rem-calc(20);
+    font-size: rem-calc(18);
     color: $black;
     text-align: center;
+
+    @include media-breakpoint-up(sm) {
+        padding: 3em rem-calc(30);
+
+        font-size: rem-calc(20);
+    }
+
+    @include media-breakpoint-up(md) {
+        padding: 4em rem-calc(30);
+
+        font-size: rem-calc(22);
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: rem-calc(24);
+    }
 }
 
 
@@ -40,14 +93,28 @@
 /* Visuals
    ========================================================================== */
 .project__visuals {
-    padding: 6em 2em;
+    max-width: 90%;
+    margin: 0 auto 6rem;
+    padding: 0;
 
-    background: #dfcae0;
+    @include media-breakpoint-up(lg) {
+        max-width: rem-calc(1200);
+    }
 }
 
 .project__visuals__item {
-    max-width: rem-calc(1000);
-    margin: 0 auto 6rem;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 2rem;
 
-    // box-shadow: 0 0 1rem 5px rgba(0, 0, 0, .05);
+    @include media-breakpoint-up(md) {
+        margin: 0 auto 4rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+        width: auto;
+        max-height: 90vh;
+        margin: 0 auto 6rem;
+    }
 }

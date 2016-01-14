@@ -5,7 +5,7 @@
    Never add styles directly to this file
    ========================================================================== */
 
-/* fontName
+/* Proxima Nova
    ========================================================================== */
 @font-face {
     font-family: 'ProximaNova';
@@ -14,6 +14,17 @@
          url('../fonts/proxi/30076F_2_0.ttf') format('truetype'),
          url('../fonts/proxi/30076F_2_0.eot'),
          url('../fonts/proxi/30076F_2_0.eot?#iefix') format('embedded-opentype');
-    font-weight: 300;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova';
+    src: url('../fonts/proxi/302080_2_0.woff2') format('woff2'),
+         url('../fonts/proxi/302080_2_0.woff') format('woff'),
+         url('../fonts/proxi/302080_2_0.ttf') format('truetype'),
+         url('../fonts/proxi/302080_2_0.eot'),
+         url('../fonts/proxi/302080_2_0.eot?#iefix') format('embedded-opentype');
+    font-weight: bold;
     font-style: normal;
 }

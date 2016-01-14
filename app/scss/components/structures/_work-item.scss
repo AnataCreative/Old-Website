@@ -131,7 +131,6 @@
     max-width: rem-calc(600);
 
     font-size: rem-calc(32);
-    font-weight: bold;
 
     @include media-breakpoint-up(md) {
         font-size: rem-calc(36);

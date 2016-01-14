@@ -6,6 +6,7 @@
 /* General
    ========================================================================== */
 .main-nav {
+    position: relative;
     width: 100%;
 
     text-align: center;
@@ -13,6 +14,54 @@
 }
 
 
+
+/* Home link
+   ========================================================================== */
+.main-nav__home-link {
+    position: absolute;
+    top: 50%;
+    left: -#{rem-calc(5)};
+
+    display: block;
+    width: rem-calc(50);
+    height: rem-calc(30);
+    background: $white;
+
+    opacity: .2;
+
+    transform: translate(0, -50%);
+    transition: opacity 1s ease;
+
+    &:hover {
+        opacity: .5;
+    }
+
+    @include media-breakpoint-up(sm) {
+        left: rem-calc(20);
+
+        width: rem-calc(30);
+    }
+
+    @include media-breakpoint-up(md) {
+        left: rem-calc(40);
+    }
+}
+
+.main-nav__home-link__img {
+    display: block;
+    width: auto;
+    height: 100%;
+    margin: 0;
+
+    @include media-breakpoint-up(sm) {
+        margin: 0 auto;
+    }
+}
+
+
+
+/* Item
+   ========================================================================== */
 .main-nav__item {
     display: inline-block;
     padding: 1.5em 1em 1.3em;
