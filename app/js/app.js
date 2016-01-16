@@ -32,7 +32,7 @@ anatacreative.app = function(undefined) {
             ticking = false;
             var currentScrollY = latestKnownScrollY;
 
-            // anatacreative.component.updateScroll(currentScrollY);
+            anatacreative.headerScroll.updateScroll(currentScrollY);
         };
 
         // scroll mousewheel wheel
@@ -42,15 +42,11 @@ anatacreative.app = function(undefined) {
     };
 
 
-    // On load
-    exports.onload = function() {
-
-    };
-
-
     // Init
     var init = function() {
-        anatacreative.component();
+        anatacreative.headerScroll();
+
+        appScroll();
     }();
 };
 
@@ -71,8 +67,3 @@ var ready = function(fn) {
 ready(function() {
     anatacreative.app();
 });
-
-
-window.onload = function() {
-    anatacreative.app.onload();
-};

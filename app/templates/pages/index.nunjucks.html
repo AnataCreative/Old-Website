@@ -17,7 +17,16 @@
         {% include 'partials/home/intro.nunjucks.html' %}
 
         <!-- Projects -->
-        {% include 'partials/work/website-bieke.nunjucks.html' %}
-        {% include 'partials/work/geboorte-fries.nunjucks.html' %}
+        {% include 'partials/projects/website-bieke.nunjucks.html' %}
+        {% include 'partials/projects/geboorte-fries.nunjucks.html' %}
     </main>
+{% endblock %}
+
+
+{% block footer %}
+    <footer class="home-footer">
+        <a href="/dist/projects/" class="home-footer__link">
+            All projects
+        </a>
+    </footer>
 {% endblock %}

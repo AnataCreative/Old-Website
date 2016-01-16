@@ -7,12 +7,15 @@
    ========================================================================== */
 .page-header {
     position: relative;
-    height: rem-calc(400);
+    height: rem-calc(220);
 
     overflow: hidden;
 
-    // background: $black;
     background: #030306;
+
+    @include media-breakpoint-up(sm) {
+        height: rem-calc(400);
+    }
 }
 
 .page-header--contact {
@@ -46,9 +49,26 @@
 
 
 
-/* Title
+
+/* Caption
    ========================================================================== */
-.page-header__title {
+// Caption
+.page-header__caption {
+    z-index: 2;
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    transform: translate3d(0, 0, 0);
+}
+
+
+// Title
+.page-header__caption__title {
     z-index: 2;
     position: absolute;
     top: 50%;
