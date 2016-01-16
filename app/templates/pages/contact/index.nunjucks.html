@@ -17,13 +17,33 @@
 
 {% block content %}
     <main role="main">
-        <article>
+        <article class="contact">
+            <header>
+                <h1 class="intro intro--center contact__intro">
+                    Hi there, <br>
+                    Let’s create something beautiful together!
+                </h1>
+            </header>
 
+            <dl class="contact__info">
+                <dt class="contact__info__title">
+                    Email
+                </dt>
+                <dd class="contact__info__details">
+                    <a href="mailto:anatacreative@gmail.com" class="contact__info__details__link">
+                        anatacreative@gmail.com
+                    </a>
+                </dd>
+
+
+                <dt class="contact__info__title">
+                    Twitter
+                </dt>
+                <dd class="contact__info__details">
+                    <a href="https://twitter.com/AnataCreative" class="contact__info__details__link">
+                        @AnataCreative
+                    </a>
+                </dd>
         </article>
     </main>
-{% endblock %}
-
-
-{% block footer %}
-
 {% endblock %}

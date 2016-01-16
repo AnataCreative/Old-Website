@@ -4,12 +4,13 @@
 
 /* General
    ========================================================================== */
-.home-intro {
+.intro {
     max-width: rem-calc(660);
     margin: 0 auto;
     padding: 2em rem-calc(30);
 
     font-size: rem-calc(25);
+    font-weight: normal;
     color: $black;
 
     strong {
@@ -42,4 +43,9 @@
         font-size: rem-calc(30);
         padding: 5em rem-calc(30) 5.5em;
     }
+}
+
+
+.intro--center {
+    text-align: center;
 }
