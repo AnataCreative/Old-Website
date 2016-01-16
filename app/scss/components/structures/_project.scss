@@ -91,15 +91,84 @@
 
 
 
-/* Visuals
+/* Container
    ========================================================================== */
-.project__visuals {
+.project__container {
     max-width: 90%;
-    margin: 0 auto 6rem;
-    padding: 0;
+    margin: 0 auto;
 
     @include media-breakpoint-up(lg) {
         max-width: rem-calc(1200);
+    }
+}
+
+
+
+/* Subtitle
+   ========================================================================== */
+.project__subtitle {
+    z-index: 1;
+    position: relative;
+    margin: 0 0 2rem;
+
+    background: $white;
+    color: #d4d4d4;
+    font-size: rem-calc(30);
+    font-weight: bold;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+        font-size: rem-calc(34);
+        margin: 0 0 6rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: rem-calc(40);
+    }
+
+    &:before {
+        content: '';
+
+        z-index: -1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        display: block;
+        width: 100vw;
+        height: 1px;
+
+        background: #f5f5f5;
+
+        transform: translate(-50%, 0);
+    }
+}
+
+.project__subtitle__text {
+    display: inline-block;
+    padding: 0 1em;
+
+    background: $white;
+}
+
+
+
+/* Visuals
+   ========================================================================== */
+.project__visuals {
+    margin: 0;
+    padding: 0;
+}
+
+.project__visuals--last {
+    margin-bottom: 6rem;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: 10rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 12rem;
     }
 }
 
@@ -109,14 +178,17 @@
     height: auto;
     margin: 0 auto 2rem;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(sm) {
         margin: 0 auto 4rem;
+    }
+
+    @include media-breakpoint-up(md) {
+        margin: 0 auto 6rem;
     }
 
     @include media-breakpoint-up(lg) {
         width: auto;
         max-height: 90vh;
-        margin: 0 auto 6rem;
     }
 }
 
@@ -180,7 +252,7 @@
 
 .project__footer__title__sm {
     position: absolute;
-    top: -80%;
+    top: -60%;
     left: 0;
 
     display: block;
@@ -194,10 +266,10 @@
     opacity: .1;
 
     @include media-breakpoint-up(sm) {
-        top: -60%;
+        top: -40%;
     }
 
     @include media-breakpoint-up(md) {
-        top: -40%;
+        top: -20%;
     }
 }
