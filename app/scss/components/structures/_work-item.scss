@@ -127,12 +127,13 @@
 /* Title
    ========================================================================== */
 .work-item__title {
-    margin: 0 0 3rem;
+    margin: 0 0 2rem;
     max-width: rem-calc(600);
 
     font-size: rem-calc(32);
 
     @include media-breakpoint-up(md) {
+        margin: 0 0 3rem;
         font-size: rem-calc(36);
     }
 
@@ -148,11 +149,12 @@
 /* Intro
    ========================================================================== */
 .work-item__intro {
-    margin: 0 0 3rem;
+    margin: 0 0 2rem;
 
     font-size: rem-calc(20);
 
     @include media-breakpoint-up(md) {
+        margin: 0 0 3rem;
         max-width: rem-calc(500);
     }
 

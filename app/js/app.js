@@ -45,6 +45,7 @@ anatacreative.app = function(undefined) {
     // Init
     var init = function() {
         anatacreative.headerScroll();
+        anatacreative.lazyload();
 
         appScroll();
     }();

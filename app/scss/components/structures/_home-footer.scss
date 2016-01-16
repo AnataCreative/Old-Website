@@ -1,0 +1,40 @@
+/* ==========================================================================
+   Home Footer
+   ========================================================================== */
+
+/* General
+   ========================================================================== */
+.home-footer {
+
+}
+
+
+
+/* Title
+   ========================================================================== */
+.home-footer__link {
+    display: block;
+    width: 100%;
+
+    padding: 2em 1em;
+
+    font-size: rem-calc(12);
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    line-height: 1;
+    text-align: center;
+    color: #d4d4d4;
+    text-decoration: none;
+
+    transition: color .6s ease;
+
+    &:hover, &:focus {
+        color: $black;
+    }
+
+    @include media-breakpoint-up(md) {
+        padding: 4em 1em;
+
+        font-size: rem-calc(14);
+    }
+}
