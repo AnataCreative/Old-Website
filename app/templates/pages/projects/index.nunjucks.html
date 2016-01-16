@@ -1,0 +1,30 @@
+{% extends "layout.nunjucks.html" %}
+
+
+{% block header %}
+    <!-- Header -->
+    <header class="page-header">
+        <figure>
+            <img src="/dist/img/projects/header.jpg" alt="projects" class="page-header__img">
+        </figure>
+    </header>
+
+    <!-- Nav -->
+    {% import 'macros/nav.nunjucks.html' as nav %}
+    {{nav.active('projects')}}
+{% endblock %}
+
+
+{% block content %}
+    <main role="main">
+        <article>
+            {% include 'partials/work/website-bieke.nunjucks.html' %}
+            {% include 'partials/work/geboorte-fries.nunjucks.html' %}
+        </article>
+    </main>
+{% endblock %}
+
+
+{% block footer %}
+
+{% endblock %}

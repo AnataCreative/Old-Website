@@ -2,61 +2,15 @@
    Project
    ========================================================================== */
 
-/* Header
-   ========================================================================== */
-// General
-.project__header {
-    position: relative;
-    height: rem-calc(400);
+/* General
+  ========================================================================== */
+.project {
+   max-width: 90%;
+   margin: 0 auto;
 
-    overflow: hidden;
-
-    background: $black;
-}
-
-
-// Image
-.project__header__img {
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 50%;
-
-    display: block;
-    width: auto;
-    height: 100%;
-    max-width: none;
-    max-height: none;
-
-    transform: translate3d(-50%, 0, 0);
-}
-
-
-// Title
-.project__header__title {
-    z-index: 2;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    width: 100%;
-    margin: 0;
-    padding: 0 rem-calc(20);
-
-    font-size: rem-calc(30);
-    line-height: 1.2;
-    text-align: center;
-    color: $white;
-
-    transform: translate3d(-50%, -50%, 0);
-
-    @include media-breakpoint-up(sm) {
-        font-size: rem-calc(44);
-    }
-
-    @include media-breakpoint-up(md) {
-        font-size: rem-calc(72);
-    }
+   @include media-breakpoint-up(lg) {
+       max-width: rem-calc(1200);
+   }
 }
 
 
@@ -86,19 +40,6 @@
 
     @include media-breakpoint-up(lg) {
         font-size: rem-calc(24);
-    }
-}
-
-
-
-/* Container
-   ========================================================================== */
-.project__container {
-    max-width: 90%;
-    margin: 0 auto;
-
-    @include media-breakpoint-up(lg) {
-        max-width: rem-calc(1200);
     }
 }
 
