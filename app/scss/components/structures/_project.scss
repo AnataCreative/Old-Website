@@ -45,12 +45,71 @@
 
 
 
+/* Text
+   ========================================================================== */
+.project__text {
+    max-width: rem-calc(860);
+    margin: 0 auto;
+    padding: 0 rem-calc(30) 2em;
+
+    font-size: rem-calc(16);
+    text-align: left;
+
+    a {
+        z-index: 1;
+        position: relative;
+        display: inline-block;
+
+        color: $black;
+        text-decoration: none;
+        text-shadow: .03em 0  $white, -.03em 0  $white, 0 .03em  $white, 0 -.03em  $white, .06em 0  $white, -.06em 0  $white, .09em 0  $white, -.09em 0  $white, .12em 0  $white, -.12em 0  $white, .15em 0  $white, -.15em 0  $white;
+
+        transition: opacity .6s ease;
+
+        &:before {
+            content: "";
+
+            z-index: -1;
+            position: absolute;
+            bottom: rem-calc(8);
+            left: 0;
+
+            display: block;
+            width: 100%;
+            height: 1px;
+
+            background: $black;
+        }
+
+        &:hover {
+            opacity: .5;
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        font-size: rem-calc(18);
+        padding: 0 rem-calc(30) 3em;
+    }
+
+    @include media-breakpoint-up(md) {
+        font-size: rem-calc(20);
+        padding: 0 rem-calc(30) 4em;
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: rem-calc(22);
+    }
+}
+
+
+
+
 /* Subtitle
    ========================================================================== */
 .project__subtitle {
     z-index: 1;
     position: relative;
-    margin: 0 0 2rem;
+    margin: 4rem 0 2rem;
 
     background: $white;
     color: #d4d4d4;
@@ -87,9 +146,13 @@
 
 .project__subtitle__text {
     display: inline-block;
-    padding: 0 1em;
+    padding: 0;
 
     background: $white;
+
+    @include media-breakpoint-up(sm) {
+        padding: 0 1em;
+    }
 }
 
 
