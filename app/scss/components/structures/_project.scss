@@ -103,60 +103,6 @@
 
 
 
-
-/* Subtitle
-   ========================================================================== */
-.project__subtitle {
-    z-index: 1;
-    position: relative;
-    margin: 4rem 0 2rem;
-
-    background: $white;
-    color: #d4d4d4;
-    font-size: rem-calc(30);
-    font-weight: bold;
-    text-align: center;
-
-    @include media-breakpoint-up(md) {
-        font-size: rem-calc(34);
-        margin: 0 0 6rem;
-    }
-
-    @include media-breakpoint-up(lg) {
-        font-size: rem-calc(40);
-    }
-
-    &:before {
-        content: '';
-
-        z-index: -1;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-
-        display: block;
-        width: 100vw;
-        height: 1px;
-
-        background: #f5f5f5;
-
-        transform: translate(-50%, 0);
-    }
-}
-
-.project__subtitle__text {
-    display: inline-block;
-    padding: 0;
-
-    background: $white;
-
-    @include media-breakpoint-up(sm) {
-        padding: 0 1em;
-    }
-}
-
-
-
 /* Visuals
    ========================================================================== */
 .project__visuals {

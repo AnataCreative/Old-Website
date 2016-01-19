@@ -19,11 +19,18 @@
     <main role="main">
         <article class="projects">
             <p class="intro intro--center">
-                We love to make something unique. Take a peak at our recent work.
+                We love to make something unique.<br> Take a peak at our work.
             </p>
 
             {% include 'partials/projects/website-bieke.nunjucks.html' %}
             {% include 'partials/projects/geboorte-fries.nunjucks.html' %}
+
+            <h2 class="sub-title sub-title--lg">
+                <span class="sub-title__text">Internal projects</span>
+            </h2>
+
+            {% include 'partials/projects/signingup.nunjucks.html' %}
+            {% include 'partials/projects/marsonia.nunjucks.html' %}
         </article>
     </main>
 {% endblock %}
