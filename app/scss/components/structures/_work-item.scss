@@ -111,7 +111,7 @@
 
 .work-item--signing-up {
     overflow: hidden;
-    background: #ace3de;
+    background: #b1e4dd;
     color: $white;
 
     .work-item__link {
@@ -153,16 +153,16 @@
 
 .work-item--marsonia {
     overflow: hidden;
-    background: $black;
-    color: $white;
+    background: $white;
+    color: $black;
 
-    // .work-item__title {
-    //     color: #f98d44;
-    // }
-    //
-    // .work-item__intro {
-    //     color: #a4a4a5;
-    // }
+    .work-item__title {
+        color: #94CC86;
+    }
+
+    .work-item__intro {
+        max-width: none;
+    }
 
     .work-item__visual {
         width: rem-calc(200);
@@ -178,13 +178,13 @@
         @include media-breakpoint-up(md) {
             margin: 0;
             padding: 0;
-            bottom: -2rem;
+            bottom: -120px;
             right: rem-calc(50);
         }
 
         @include media-breakpoint-up(lg) {
-            right: rem-calc(150);
-            width: rem-calc(400);
+            right: rem-calc(50);
+            width: rem-calc(300);
         }
     }
 }
