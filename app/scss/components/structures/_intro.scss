@@ -9,9 +9,10 @@
     margin: 0 auto;
     padding: 2em rem-calc(30);
 
-    font-size: rem-calc(25);
+    font-size: rem-calc(23);
     font-weight: normal;
     color: $black;
+    text-align: center;
 
     strong {
         position: relative;
@@ -35,13 +36,16 @@
     }
 
     @include media-breakpoint-up(sm) {
-        font-size: rem-calc(28);
         padding: 4em rem-calc(30) 4.5em;
+
+        font-size: rem-calc(28);
     }
 
     @include media-breakpoint-up(md) {
-        font-size: rem-calc(30);
         padding: 5em rem-calc(30) 5.5em;
+
+        font-size: rem-calc(30);
+        text-align: left;
     }
 }
 
