@@ -19,7 +19,7 @@
     "otherJs": "<=resourcesPath>js/other/*.js",
 
     "dist": {
-        "templates": "<=distPath>",
+        "templates": "",
         "css": "<=distPath>css",
         "js": "<=distPath>js",
         "img": "<=distPath>img",

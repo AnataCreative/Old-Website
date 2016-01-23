@@ -1,0 +1,201 @@
+/* ==========================================================================
+   Blocks - Work item Types
+   ========================================================================== */
+
+
+/* Biekedejonghe.be
+   ========================================================================== */
+.work-item--website-bieke {
+    background: #fafafa;
+
+    .work-item__title {
+        color: #d189d6;
+    }
+
+    .work-item__intro {
+        color: #a4a4a5;
+    }
+
+    .work-item__link {
+        color: $black;
+
+        &:hover, &:focus, &:active {
+            color: $black;
+        }
+
+        &:before {
+            background: #d189d6;
+        }
+    }
+
+    .work-item__visual {
+        margin: -5rem 0 -85px;
+        padding: 0 0 0 rem-calc(80);
+
+        @include media-breakpoint-up(md) {
+            margin: 0;
+            padding: 0;
+            top: -40px;
+        }
+    }
+
+    .work-item__visual__img {
+        max-width: rem-calc(400);
+
+        @include media-breakpoint-up(md) {
+            max-width: rem-calc(430);
+        }
+
+        @include media-breakpoint-up(lg) {
+            max-width: rem-calc(500);
+        }
+    }
+}
+
+
+
+/* Fries
+   ========================================================================== */
+.work-item--geboorte-fries {
+    background: #c4e88d;
+    overflow: hidden;
+
+    .work-item__title {
+        color: $white;
+    }
+
+    .work-item__intro {
+        color: $white;
+    }
+
+    .work-item__link {
+        color: $white;
+
+        &:hover, &:focus, &:active {
+            color: $white;
+        }
+
+        &:before {
+            background: $white;
+        }
+    }
+
+    .work-item__visual {
+        width: rem-calc(200);
+        margin: -3rem 0 -8rem 8rem;
+        padding: 0 rem-calc(30);
+
+        @include media-breakpoint-up(sm) {
+            margin: -2rem auto -8rem;
+        }
+
+        @include media-breakpoint-up(md) {
+            margin: 0;
+            padding: 0;
+            bottom: -4rem;
+            right: rem-calc(100);
+            width: rem-calc(230);
+        }
+
+        @include media-breakpoint-up(lg) {
+            right: rem-calc(200);
+            width: rem-calc(300);
+        }
+    }
+
+    .work-item__visual__img {
+        margin: 0 auto;
+
+        @include media-breakpoint-up(md) {
+            margin: 0;
+        }
+    }
+}
+
+
+
+/* Signing Up
+   ========================================================================== */
+.work-item--signing-up {
+    overflow: hidden;
+    background: #b1e4dd;
+    color: $white;
+
+    .work-item__link {
+        color: $white;
+
+        &:hover, &:focus, &:active {
+            color: $white;
+        }
+
+        &:before {
+            background: $white;
+        }
+    }
+
+    .work-item__visual {
+        width: rem-calc(200);
+        margin: -3rem 0 -6rem 8rem;
+        padding: 0 rem-calc(30);
+
+        @include media-breakpoint-up(sm) {
+            float: right;
+            width: rem-calc(250);
+            margin: -2rem auto -8rem;
+        }
+
+        @include media-breakpoint-up(md) {
+            margin: 0;
+            padding: 0;
+            bottom: -4rem;
+            right: rem-calc(50);
+        }
+
+        @include media-breakpoint-up(lg) {
+            right: rem-calc(130);
+            width: rem-calc(350);
+        }
+    }
+}
+
+
+
+/* Marsonia
+   ========================================================================== */
+.work-item--marsonia {
+    overflow: hidden;
+    background: $white;
+    color: $black;
+
+    .work-item__title {
+        color: #94CC86;
+    }
+
+    .work-item__intro {
+        max-width: none;
+    }
+
+    .work-item__visual {
+        width: rem-calc(200);
+        margin: 0 0 -2rem 8rem;
+        padding: 0 rem-calc(30);
+
+        @include media-breakpoint-up(sm) {
+            float: right;
+            width: rem-calc(300);
+            margin: 0 auto -10rem;
+        }
+
+        @include media-breakpoint-up(md) {
+            margin: 0;
+            padding: 0;
+            bottom: -120px;
+            right: rem-calc(50);
+        }
+
+        @include media-breakpoint-up(lg) {
+            right: rem-calc(50);
+            width: rem-calc(300);
+        }
+    }
+}

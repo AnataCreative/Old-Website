@@ -5,8 +5,9 @@
 
 /* General
    ========================================================================== */
-// .main-footer {
-//
-//
-//     @include media-breakpoint-up(md) {}
-// }
+.main-footer {
+    background: $black;
+    height: rem-calc(126);
+
+    @include media-breakpoint-up(md) {}
+}
