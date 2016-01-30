@@ -113,6 +113,52 @@
 }
 
 
+.work-item--ksa-tvlinderke {
+    background: #fafafa;
+    overflow: hidden;
+
+    .work-item__title {
+        color: #ffbc5a;
+    }
+
+    .work-item__intro {
+        color: #a4a4a5;
+    }
+
+    .work-item__link {
+        color: $black;
+
+        &:hover, &:focus, &:active {
+            color: $black;
+        }
+
+        &:before {
+            background: #ffbc5a;
+        }
+    }
+
+    .work-item__visual {
+        margin: -4rem 0 -4rem;
+        padding: 0 0 0 rem-calc(80);
+
+        @include media-breakpoint-up(md) {
+            margin: 0;
+            padding: 0;
+            bottom: 0;
+            right: 15%;
+        }
+    }
+
+    .work-item__visual__img {
+        max-width: rem-calc(300);
+
+        @include media-breakpoint-up(lg) {
+            max-width: rem-calc(350);
+        }
+    }
+}
+
+
 
 /* Signing Up
    ========================================================================== */
