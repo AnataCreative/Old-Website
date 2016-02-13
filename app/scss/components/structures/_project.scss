@@ -71,7 +71,7 @@
 
             z-index: -1;
             position: absolute;
-            bottom: rem-calc(8);
+            bottom: rem-calc(6);
             left: 0;
 
             display: block;
@@ -79,6 +79,18 @@
             height: 1px;
 
             background: $black;
+
+            @include media-breakpoint-up(sm) {
+                bottom: rem-calc(6);
+            }
+
+            @include media-breakpoint-up(md) {
+                bottom: rem-calc(7);
+            }
+
+            @include media-breakpoint-up(lg) {
+                bottom: rem-calc(8);
+            }
         }
 
         &:hover {
