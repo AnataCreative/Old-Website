@@ -11,7 +11,6 @@
     "img": "<=resourcesPath>img/**/*.{png,jpg,jpeg,gif,svg,webp}",
     "fonts": "<=resourcesPath>fonts/**/*.{eot,ttf,woff,woff2}",
     "js": [
-        "<=bowerComponentsPath>vanilla-lazyload/dist/lazyload.min.js",
         "<=resourcesPath>js/scope.js",
         "<=resourcesPath>js/components/*.js",
         "<=resourcesPath>js/app.js"
