@@ -2,10 +2,42 @@
    Main scaffolding
    ========================================================================== */
 
+/* Content container
+   ========================================================================== */
 .content-container {
     z-index: 2;
     position: relative;
     background: $white;
 
     overflow: hidden;
+}
+
+
+/* Grid
+   ========================================================================== */
+.row {
+    max-width: 90%;
+    margin: 0 auto;
+
+    @include media-breakpoint-up(md) {
+        display: flex;
+    }
+
+    @include media-breakpoint-up(lg) {
+        max-width: rem-calc(1200);
+    }
+}
+
+
+.col {
+    @include media-breakpoint-up(md) {
+        flex: 1 1 auto;
+    }
+}
+
+
+.col--md-6 {
+    @include media-breakpoint-up(md) {
+        flex: 0 0 50%;
+    }
 }

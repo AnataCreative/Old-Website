@@ -1,0 +1,108 @@
+/* ==========================================================================
+   About Item
+   ========================================================================== */
+
+/* General
+   ========================================================================== */
+.about-item {
+    position: relative;
+
+    text-align: center;
+    margin: 0 0 2rem;
+    padding: 0 0 6em;
+
+    &:after {
+        content: '';
+
+        position: absolute;
+        bottom: 3em;
+        left: 50%;
+
+        width: rem-calc(30);
+        height: 1px;
+
+        transform: translateX(-50%);
+    }
+
+    @include media-breakpoint-up(md) {
+        margin: 1rem 0 0;
+        padding: 0 0 6em;
+
+        &:after {
+            width: rem-calc(50);
+        }
+    }
+}
+
+.about-item--illu {
+
+    &:after {
+        background: #ef6a56;
+    }
+}
+
+.about-item--code {
+
+    &:after {
+        background: #86aedd;
+    }
+}
+
+
+/* Fig
+   ========================================================================== */
+.about-item__fig {
+    display: block;
+    margin: 0 auto;
+    max-width: rem-calc(50);
+
+    @include media-breakpoint-up(md) {
+        max-width: rem-calc(80);
+    }
+}
+
+
+/* Title
+   ========================================================================== */
+.about-item__title {
+    margin: rem-calc(20) 0 rem-calc(30);
+
+    font-size: rem-calc(28);
+
+    @include media-breakpoint-up(md) {
+        margin: rem-calc(30) 0 rem-calc(35);
+
+        font-size: rem-calc(30);
+    }
+}
+
+.about-item__title__sm {
+    display: block;
+    margin: rem-calc(5) 0 0;
+
+    font-size: rem-calc(15);
+    color: #d4d4d4;
+
+    @include media-breakpoint-up(md) {
+        margin: rem-calc(10) 0 0;
+
+        font-size: rem-calc(16);
+    }
+}
+
+
+/* Intro
+   ========================================================================== */
+.about-item__info {
+    display: block;
+    max-width: rem-calc(500);
+    margin: 0 auto;
+
+    font-size: rem-calc(18);
+
+    @include media-breakpoint-up(md) {
+        max-width: 90%;
+
+        font-size: rem-calc(20);
+    }
+}
