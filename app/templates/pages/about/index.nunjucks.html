@@ -1,0 +1,117 @@
+{% extends "layout.nunjucks.html" %}
+
+{% block pagetitle %}About - {% endblock %}
+
+{% block header %}
+    <!-- Header -->
+    <header class="page-header">
+        <figure>
+            <img sizes="100vw" srcset="/dist/img/about/header.jpg 700w, /dist/img/about/header.jpg 1400w" alt="Projects" id="scroll-header-img" class="page-header__img">
+            <!-- <img sizes="100vw" srcset="https://unsplash.it/g/700/220/?gravity=center&random 700w, https://unsplash.it/g/1400/400/?gravity=center&random 1400w" alt="Projects" id="scroll-header-img" class="page-header__img"> -->
+        </figure>
+    </header>
+
+    <!-- Nav -->
+    {% import 'macros/nav.nunjucks.html' as nav %}
+    {{nav.active('about')}}
+{% endblock %}
+
+
+{% block content %}
+    <main role="main">
+        <article class="contact">
+            <!-- Intro -->
+            <header>
+                <h2 class="intro contact__intro">
+                    Anata Creative is a small and young creative agency propelled by craftsmanship and engagement.
+                </h2>
+            </header>
+
+            <!-- About -->
+            <section class="row">
+                <div class="col col-md--6">
+                    <figure class="about-item">
+                        <img src="/dist/img/about/illustration.svg" alt="Illustration" class="about-item__fig">
+                        <figcaption class="about-item__cap">
+                            <h2 class="about-item__title">
+                                Web development
+                                <small class="about-item__title__sm">
+                                    Web development - Web design - User experience
+                                </small>
+                            </h2>
+                        </figcaption>
+                    </figure>
+                    <p class="about-item__info">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing. Suspendisse eget diam metus. Enim id nulla malesuada posuere vel ut sapien.
+                    </p>
+                </div>
+                <div class="col col-md--6">
+                    <figure class="about-item">
+                        <img src="/dist/img/about/code.svg" alt="Code" class="about-item__fig">
+                        <figcaption class="about-item__cap">
+                            <h2 class="about-item__title">
+                                Illustration
+                                <small class="about-item__title__sm">
+                                    Character design - Print - Digital - Typography
+                                </small>
+                            </h2>
+                        </figcaption>
+                    </figure>
+                    <p class="about-item__info">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing. Suspendisse eget diam metus. Enim id nulla malesuada posuere vel ut sapien.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <section class="">
+                <form action="" class="form">
+                    <header class="form__header">
+                        <h2 class="form__header__title">
+                            <small class="form__header__title__sm">
+                                Discover your
+                            </small>
+                            Opportunities
+                        </h2>
+                        <p class="form__intro">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing. Suspendisse eget diam metus. Enim id nulla malesuada posuere vel ut sapien.
+                        </p>
+                    </header>
+
+                    <div class="row">
+                        <div class="col col--md-6 form__control">
+                            <label class="form__control__label">
+                                Name
+                            </label>
+                            <input type="text" class="form__control__input">
+                        </div>
+                        <div class="col col--md-6 form__control">
+                            <label class="form__control__label">
+                                Email
+                            </label>
+                            <input type="email" class="form__control__input">
+                        </div>
+                    </div>
+
+                    <div class="form__control">
+                        <label class="form__control__label">
+                            Name
+                        </label>
+                        <input type="text" class="form__control__input">
+                    </div>
+
+                    <div class="input">
+                        <label class="form__control__label">
+                            Remarks
+                        </label>
+                        <textarea class="form__control__input"></textarea>
+                    </div>
+
+                    <button type="submit" class="form__submit">
+                        Send
+                    </button>
+                </form>
+            </section>
+        </article>
+    </main>
+{% endblock %}
