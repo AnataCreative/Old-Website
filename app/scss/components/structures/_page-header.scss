@@ -18,15 +18,6 @@
     }
 }
 
-.page-header--contact {
-
-    .page-header__img {
-        left: auto;
-        right: 0;
-
-        transform: translate3d(0, 0, 0);
-    }
-}
 
 
 
@@ -92,4 +83,8 @@
     @include media-breakpoint-up(md) {
         font-size: rem-calc(72);
     }
+}
+
+.page-header__caption__title--shadow {
+    text-shadow: 0 0 100px rgba(0, 0, 0, .8);
 }

@@ -6,8 +6,15 @@
     <!-- Header -->
     <header class="page-header">
         <figure>
-            <img sizes="100vw" srcset="/dist/img/about/header.jpg 700w, /dist/img/about/header.jpg 1400w" alt="Projects" id="scroll-header-img" class="page-header__img">
-            <!-- <img sizes="100vw" srcset="https://unsplash.it/g/700/220/?gravity=center&random 700w, https://unsplash.it/g/1400/400/?gravity=center&random 1400w" alt="Projects" id="scroll-header-img" class="page-header__img"> -->
+            <img src="/dist/img/about/header.jpg" alt="About" id="scroll-header-img" class="page-header__img">
+            {# <!--
+                <img sizes="100vw" srcset="https://unsplash.it/g/700/220/?gravity=center&random 700w, https://unsplash.it/g/1400/400/?gravity=center&random 1400w" alt="Projects" id="scroll-header-img" class="page-header__img">
+            --> #}
+            <figcaption id="scroll-header-caption" class="page-header__caption">
+                <h1 class="page-header__caption__title page-header__caption__title--shadow">
+                    About
+                </h1>
+            </figcaption>
         </figure>
     </header>
 
@@ -64,6 +71,7 @@
             </section>
 
             <!-- Contact -->
+            {# <!--
             <section class="">
                 <form action="" class="form">
                     <header class="form__header">
@@ -112,6 +120,7 @@
                     </button>
                 </form>
             </section>
+            --> #}
         </article>
     </main>
 {% endblock %}
