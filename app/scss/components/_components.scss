@@ -12,6 +12,12 @@
         "blocks/sr";
 
 
+/* Forms
+   ========================================================================== */
+@import "forms/form",
+        "forms/form-control";
+
+
 /* Structures
    ========================================================================== */
 @import "structures/full-logo",
@@ -25,6 +31,7 @@
         "structures/sub-title",
         "structures/projects",
         "structures/project",
+        "structures/opportunities",
         "structures/contact";
 
 
