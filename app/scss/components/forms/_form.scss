@@ -70,3 +70,38 @@
         font-size: rem-calc(22);
     }
 }
+
+
+/* Submit
+   ========================================================================== */
+.form__submit {
+    padding: 0 1em;
+    margin: 0 0 4rem 0;
+
+    text-align: right;
+}
+
+.form__submit__btn {
+    display: inline-block;
+    margin: 0;
+    padding: 1em 2em;
+    border: 0;
+
+    vertical-align: middle;
+    font-size: rem-calc(14);
+    line-height: 1;
+    background: $black;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+
+    transition: background .3s ease;
+
+    &:active, &:focus {
+        outline: 0;
+    }
+
+    &:hover {
+        background: #86aedd;
+    }
+}

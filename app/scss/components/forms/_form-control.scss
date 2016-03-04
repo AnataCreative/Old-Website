@@ -6,19 +6,58 @@
 /* General
    ========================================================================== */
 .form-control {
+    position: relative;
 
+    margin: 0 0 2rem;
+    padding: 0 1em;
 }
 
 
 /* Label
    ========================================================================== */
 .form-control__label {
-
+    display: block;
 }
 
 
 /* Input
    ========================================================================== */
 .form-control__input {
+    display: block;
+    width: 100%;
+    margin: .5rem 0 0;
+    padding: 1em;
 
+    color: $black;
+    background: #f3f3f3;
+    border: none;
+    border-radius: 0;
+
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+
+    &:focus, &:active {
+        outline: 0;
+
+        & + .form-control__indicator {
+            width: calc(100% - 2em);
+        }
+    }
+}
+
+.form-control__input--textarea {
+
+}
+
+.form-control__indicator {
+    position: absolute;
+    bottom: 0;
+    left: 1em;
+
+    width: 0;
+    height: 1px;
+    background: #E0E0E0;
+
+    transition: width .6s ease;
 }
