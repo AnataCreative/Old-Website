@@ -2,8 +2,6 @@
    Anata Creative
    ========================================================================== */
 
-var anatacreative = anatacreative || {};
-
 anatacreative.app = function(undefined) {
 
     var exports = this.app;
@@ -45,6 +43,7 @@ anatacreative.app = function(undefined) {
     // Init
     var init = function() {
         anatacreative.headerScroll();
+        anatacreative.forms();
 
         appScroll();
     }();

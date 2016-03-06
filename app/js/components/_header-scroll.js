@@ -2,8 +2,6 @@
    AnataCreative - headerScroll
    ========================================================================== */
 
-var anatacreative = anatacreative || {};
-
 anatacreative.headerScroll = function(undefined) {
 
     var exports = this.headerScroll;

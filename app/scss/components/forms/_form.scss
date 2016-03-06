@@ -8,6 +8,8 @@
 .form {
     background: $white;
 
+    transition: opacity .3s ease;
+
     @include media-breakpoint-up(md) {
         padding: 0 4em 4em;
 
@@ -25,6 +27,73 @@
         }
     }
 }
+
+.form--submitting {
+    opacity: .4;
+}
+
+.form--success {
+
+    .form__content {
+        display: none;
+    }
+    .form__success {
+        display: block;
+    }
+}
+
+.form--error {
+
+    .form__error {
+        display: block;
+    }
+}
+
+
+/* Content
+   ========================================================================== */
+.form__content {
+    display: block;
+}
+
+
+/* Success
+   ========================================================================== */
+.form__success {
+    display: none;
+
+    text-align: center;
+}
+
+.form__success__icon {
+    width: rem-calc(20);
+}
+
+.form__success__title {
+    margin: 0 0 1rem;
+}
+
+
+/* Error
+   ========================================================================== */
+.form__error {
+    display: none;
+    margin: 0 0 2rem;
+    padding: 0 1em;
+
+    color: #ef6a56;
+    line-height: rem-calc(20);
+    font-weight: bold;
+    text-align: left;
+}
+
+.form__error__icon {
+    display: inline;
+    margin: 0 rem-calc(5) 0;
+    height: rem-calc(20);
+    vertical-align: middle;
+}
+
 
 
 /* Title
@@ -81,11 +150,11 @@
     text-align: right;
 }
 
-.form__submit__btn {
+.submit-btn {
     display: inline-block;
     margin: 0;
     padding: 1em 2em;
-    border: 0;
+    border: 1px solid $black;
 
     vertical-align: middle;
     font-size: rem-calc(14);
@@ -95,13 +164,44 @@
     text-transform: uppercase;
     letter-spacing: .2em;
 
-    transition: background .3s ease;
+    transition: background .3s ease, border-color .3s ease, color .3s ease;
 
     &:active, &:focus {
         outline: 0;
     }
 
     &:hover {
+        border-color: #86aedd;
         background: #86aedd;
     }
+
+    .submit-btn__txt {
+        display: block;
+    }
+    .submit-btn__txt-sending {
+        display: none;
+    }
+}
+
+.submit-btn--loading {
+
+    &, &:hover {
+        background: $white;
+        border-color: $black;
+        color: $black;
+    }
+
+    .submit-btn__txt {
+        display: none;
+    }
+    .submit-btn__txt-sending {
+        display: block;
+    }
+}
+
+
+/* Hidden
+   ========================================================================== */
+.form__hidden {
+    display: none;
 }

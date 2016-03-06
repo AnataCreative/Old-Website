@@ -50,7 +50,6 @@
                         <p class="about-item__info">
                             No default templates, but a website build purely around you and your project.
                             We build state of the art responsive websites with a profound eye for detail, perfomance and functionality.
-
                         </p>
                     </div>
                 </div>
@@ -76,7 +75,7 @@
             <!-- Contact -->
 
             <section class="opportunities">
-                <form action="" id="opportunities-form" class="form">
+                <form action="//formspree.io/info@anatacreative.com" method="POST" id="form" class="form">
                     <header>
                         <h2 class="form__title">
                             <small class="form__title__sm">
@@ -85,47 +84,59 @@
                             Opportunities
                         </h2>
                         <p class="form__intro">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing. Suspendisse eget diam metus. Enim id nulla malesuada posuere vel ut sapien.
+                            Have a project in mind? Want to improve your current website or just build a new one? Let us know below and discover what we can do for you.
                         </p>
                     </header>
 
-                    <div class="row">
-                        <div class="col col--md-6 form-control">
-                            <label class="form-control__label">
-                                Name *
+                    <div class="form__content">
+                        <div class="row row--full">
+                            <div class="col col--md-6 form-control">
+                                <label for="input-name" class="form-control__label">
+                                    Name *
+                                </label>
+                                <input type="text" id="input-name" name="name" class="js-form-input form-control__input" required>
+                                <span class="form-control__indicator"></span>
+                            </div>
+                            <div class="col col--md-6 form-control">
+                                <label for="input-email" class="form-control__label">
+                                    Email *
+                                </label>
+                                <input type="email" id="input-email" name="email" class="js-form-input form-control__input" required>
+                                <span class="form-control__indicator"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-control">
+                            <label for="input-message" class="form-control__label">
+                                Message *
                             </label>
-                            <input type="text" class="form-control__input">
+                            <textarea name="message" id="input-message" class="js-form-input form-control__input form-control__input--textarea" required></textarea>
                             <span class="form-control__indicator"></span>
                         </div>
-                        <div class="col col--md-6 form-control">
-                            <label class="form-control__label">
-                                Email *
-                            </label>
-                            <input type="email" class="form-control__input">
-                            <span class="form-control__indicator"></span>
+
+                        <input type="text" name="_gotcha" class="form__hidden" placeholder="don't fill in this field!">
+                        <input type="hidden" name="_next" value="//anatacreative.com/thanks/" class="form__hidden">
+
+                        <div class="form__error">
+                            <img src="/dist/img/about/sad.svg" alt="Sad Man" class="form__error__icon">
+                            Whoops, something went wrong. Could you try that again please?
+                        </div>
+
+                        <div class="form__submit">
+                            <button type="submit" id="form-submit" class="submit-btn">
+                                <span class="submit-btn__txt">Send</span>
+                                <span class="submit-btn__txt-sending">Sending...</span>
+                            </button>
                         </div>
                     </div>
-
-                    <div class="form-control">
-                        <label class="form-control__label">
-                            Current website
-                        </label>
-                        <input type="text" class="form-control__input" placeholder="http://">
-                        <span class="form-control__indicator"></span>
-                    </div>
-
-                    <div class="form-control">
-                        <label class="form-control__label">
-                            Message *
-                        </label>
-                        <textarea class="form-control__input form-control__input--textarea"></textarea>
-                        <span class="form-control__indicator"></span>
-                    </div>
-
-                    <div class="form__submit">
-                        <button type="submit" class="form__submit__btn">
-                            Send
-                        </button>
+                    <div class="form__success">
+                        <img src="/dist/img/about/happy.svg" alt="Happy Man" class="form__success__icon">
+                        <h2 class="form__success__title">
+                            Thanks!
+                        </h2>
+                        <p class="form__success__txt">
+                            Awesome! We will get back to you as soon as we can.
+                        </p>
                     </div>
                 </form>
             </section>

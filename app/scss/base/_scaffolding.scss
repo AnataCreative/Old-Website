@@ -29,6 +29,15 @@
 }
 
 
+.row--full {
+    max-width: none;
+
+    @include media-breakpoint-up(lg) {
+        max-width: none;
+    }
+}
+
+
 .col {
     @include media-breakpoint-up(md) {
         flex: 1 1 auto;
