@@ -1,5 +1,7 @@
 {% extends "layout.nunjucks.html" %}
 
+{% set lang = "nl" %}
+
 {% block pagetitle %}{% endblock %}
 
 {% block header %}
@@ -8,7 +10,7 @@
 
     <!-- Nav -->
     {% import 'macros/nav.nunjucks.html' as navigation %}
-    {{navigation.nav('home','en')}}
+    {{navigation.nav('home','nl')}}
 {% endblock %}
 
 
@@ -27,7 +29,7 @@
 {% block footer %}
     <footer class="home-footer">
         <a href="/projects/" class="home-footer__link">
-            View all projects
+            Bekijk alle projecten
         </a>
     </footer>
 {% endblock %}

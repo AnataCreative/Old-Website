@@ -2,7 +2,11 @@
     <div class="container">
         <header>
             <h2 class="work-item__title">
-                Welcome Fries
+                {% if lang == 'nl' %}
+                    Welkom Fries
+                {% else %}
+                    Welcome Fries
+                {% endif %}
             </h2>
         </header>
 

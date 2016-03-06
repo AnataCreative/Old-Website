@@ -1,18 +1,17 @@
 {% extends "layout.nunjucks.html" %}
 
-{% block pagetitle %}Projects - {% endblock %}
+{% set lang = "nl" %}
+
+{% block pagetitle %}Projecten - {% endblock %}
 
 {% block header %}
     <!-- Header -->
     <header class="page-header">
         <figure>
             <img src="/dist/img/projects/header.jpg" alt="Projects" id="scroll-header-img" class="page-header__img">
-            {# <!--
-            <img sizes="100vw" srcset="/dist/img/projects/header.jpg 700w, /dist/img/projects/header.jpg 1400w" alt="Projects" id="scroll-header-img" class="page-header__img">
-            --> #}
             <figcaption id="scroll-header-caption" class="page-header__caption">
                 <h1 class="page-header__caption__title page-header__caption__title--shadow">
-                    Projects
+                    Projecten
                 </h1>
             </figcaption>
         </figure>
@@ -20,7 +19,7 @@
 
     <!-- Nav -->
     {% import 'macros/nav.nunjucks.html' as navigation %}
-    {{navigation.nav('projects','en')}}
+    {{navigation.nav('projects','nl')}}
 {% endblock %}
 
 
@@ -36,7 +35,7 @@
             {% include 'partials/projects/ksa-tvlinderke.nunjucks.html' %}
 
             <h2 class="sub-title sub-title--lg">
-                <span class="sub-title__text">Internal projects</span>
+                <span class="sub-title__text">Interne projecten</span>
             </h2>
 
             {% include 'partials/projects/signingup.nunjucks.html' %}

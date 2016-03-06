@@ -1,15 +1,15 @@
 {% extends "layout.nunjucks.html" %}
 
-{% block pagetitle %}About - {% endblock %}
+{% block pagetitle %}Over ons - {% endblock %}
 
 {% block header %}
     <!-- Header -->
     <header class="page-header">
         <figure>
-            <img src="/dist/img/about/header.jpg" alt="About" id="scroll-header-img" class="page-header__img">
+            <img src="/dist/img/about/header.jpg" alt="Over ons" id="scroll-header-img" class="page-header__img">
             <figcaption id="scroll-header-caption" class="page-header__caption">
                 <h1 class="page-header__caption__title page-header__caption__title--shadow">
-                    About
+                    Over ons
                 </h1>
             </figcaption>
         </figure>
@@ -17,7 +17,7 @@
 
     <!-- Nav -->
     {% import 'macros/nav.nunjucks.html' as navigation %}
-    {{navigation.nav('about','en')}}
+    {{navigation.nav('about','nl')}}
 {% endblock %}
 
 
@@ -27,7 +27,7 @@
             <!-- Intro -->
             <header>
                 <h2 class="intro contact__intro">
-                    Anata Creative is a small and young creative agency propelled by craftsmanship and engagement.
+                    Anata Creative is een klein en jong creatief bureau gedreven door vakmanschap en toewijding.
                 </h2>
             </header>
 
@@ -45,8 +45,8 @@
                             </small>
                         </h2>
                         <p class="about-item__info">
-                            No default templates, but a website build purely around you and your project.
-                            We build state of the art responsive websites with a profound eye for detail, perfomance and functionality.
+                            Geen standaard templates, maar een website die gebouw is rond jouw en uw project.
+                            Wij bouwen state-of-the-art repsonsive websites met een sterk oog voor detail, snelheid en functionaliteit.
                         </p>
                     </div>
                 </div>
@@ -56,14 +56,14 @@
                             <img src="/dist/img/about/illustration.svg" alt="Illustration" class="about-item__fig">
                         </figure>
                         <h2 class="about-item__title">
-                            Illustration
+                            Illustraties
                             <small class="about-item__title__sm">
                                 Character design - Print - Digital - Typography
                             </small>
                         </h2>
                         <p class="about-item__info">
-                            From a personal birthday card to a birth announcement, we got the artistic talent to make it happen.
-                            Our home artist has masterskills in character design and typography and will make that image in your head become reality.
+                            Van een persoonlijk verjaardagskaartje tot een geboortekaartje, wij het het artestiek talent in huis om het te realiseren.
+                            Onze huisartiest heeft heeft zich gespecialiseerd in character design en typography. Hij zal dat beeld in jouw hoofd perfect tot de realiteit brengen.
                         </p>
                     </div>
                 </div>
@@ -76,12 +76,12 @@
                     <header>
                         <h2 class="form__title">
                             <small class="form__title__sm">
-                                Discover your
+                                Ondek uw
                             </small>
-                            Opportunities
+                            opportuniteiten
                         </h2>
                         <p class="form__intro">
-                            Have a project in mind? Want to improve your current website or just build a new one? Let us know below and discover your opportunities.
+                            Een project in gedachten? Wil je uw huidige site verbeteren of heb je een nieuwe nodig? Laat het ons weten en ontdek wat wij voor jou kunnen betekenen.
                         </p>
                     </header>
 
@@ -89,14 +89,14 @@
                         <div class="row row--full">
                             <div class="col col--md-6 form-control">
                                 <label for="input-name" class="form-control__label">
-                                    Name *
+                                    Naam *
                                 </label>
                                 <input type="text" id="input-name" name="name" class="js-form-input form-control__input" required>
                                 <span class="form-control__indicator"></span>
                             </div>
                             <div class="col col--md-6 form-control">
                                 <label for="input-email" class="form-control__label">
-                                    Email *
+                                    E-mail *
                                 </label>
                                 <input type="email" id="input-email" name="email" class="js-form-input form-control__input" required>
                                 <span class="form-control__indicator"></span>
@@ -105,7 +105,7 @@
 
                         <div class="form-control">
                             <label for="input-message" class="form-control__label">
-                                Message *
+                                Bericht *
                             </label>
                             <textarea name="message" id="input-message" class="js-form-input form-control__input form-control__input--textarea" required></textarea>
                             <span class="form-control__indicator"></span>
@@ -116,23 +116,23 @@
 
                         <div class="form__error">
                             <img src="/dist/img/about/sad.svg" alt="Sad Man" class="form__error__icon">
-                            Whoops, something went wrong. Could you try that again please?
+                            Whoops, er is iets mis gegaan. Kan je het eens opnieuw proberen?
                         </div>
 
                         <div class="form__submit">
                             <button type="submit" id="form-submit" class="submit-btn">
-                                <span class="submit-btn__txt">Send</span>
-                                <span class="submit-btn__txt-sending">Sending...</span>
+                                <span class="submit-btn__txt">Verzenden</span>
+                                <span class="submit-btn__txt-sending">Wordt verzonden...</span>
                             </button>
                         </div>
                     </div>
                     <div class="form__success">
                         <img src="/dist/img/about/happy.svg" alt="Happy Man" class="form__success__icon">
                         <h2 class="form__success__title">
-                            Thanks!
+                            Bedankt!
                         </h2>
                         <p class="form__success__txt">
-                            Awesome! We will get back to you as soon as we can.
+                            Tof! We bekijken jou bericht zo snel mogelijk.
                         </p>
                     </div>
                 </form>
