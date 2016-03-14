@@ -1,0 +1,34 @@
+/* ==========================================================================
+   Lang Nav
+   ========================================================================== */
+
+/* General
+   ========================================================================== */
+.lang-nav {
+	z-index: 10;
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	padding: 1em .5em;
+
+	font-size: rem-calc(10);
+	line-height: 1;
+	letter-spacing: .2em;
+}
+
+
+
+/* Link
+   ========================================================================== */
+.lang-nav__link {
+	display: inline-block;
+	padding: 0 .5em;
+
+	color: #5F5F5F;
+	text-decoration: none;
+}
+
+.lang-nav__link--dark {
+	color: #666;
+}
