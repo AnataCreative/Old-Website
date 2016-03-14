@@ -7,15 +7,27 @@
         </header>
 
         <p class="work-item__intro">
-            Being a part of this youth movement for many years, we wanted to make a beautiful and happy website for these magnificent boys and girls.
+            {% if lang == 'nl' %}
+                We hebben het gelukt gehad om lang deel uit te maken van deze prachtige jeugdbeweging. Deze verdiende vanzelfsprekend een mooie en vrolijke website!
+            {% else %}
+                Being a part of this youth movement for many years, we wanted to make a beautiful and happy website for these magnificent boys and girls.
+            {% endif %}
         </p>
 
         <nav>
-            <a href="/projects/ksa-t-vlinderke/" class="work-item__link">
-                View full case
+            <a href="{% if lang == 'nl' %}/nl/projecten/ksa-t-vlinderke/{% else %}/projects/ksa-t-vlinderke/{% endif %}" class="work-item__link">
+                {% if lang == 'nl' %}
+                    Meer info
+                {% else %}
+                    View full case
+                {% endif %}
             </a>
             <a href="http://ksatvlinderke.be" class="work-item__link" target="_blank">
-                View website
+                {% if lang == 'nl' %}
+                    Bekijk de website
+                {% else %}
+                    View website
+                {% endif %}
             </a>
         </nav>
 

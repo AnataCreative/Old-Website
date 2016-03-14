@@ -11,12 +11,21 @@
         </header>
 
         <p class="work-item__intro">
-            What a beautifull day it was, when Fries came to the big world. Together with the parents, we crafted the birth announcement to notify the world.
+
+            {% if lang == 'nl' %}
+                Wat een mooie dag was het, toen Fries ons kwam vergezellen op deze grote wereld. Samen met zijn ouders hebben we voor hem alvast een mooie aankondiging gemaakt om hem te verwelkomen.
+            {% else %}
+                What a beautifull day it was, when Fries came to the big world. Together with the parents, we crafted the birth announcement to notify the world.
+            {% endif %}
         </p>
 
         <nav>
-            <a href="/projects/welcome-fries/" class="work-item__link">
-                View full case
+            <a href="{% if lang == 'nl' %}/nl/projecten/welkom-fries/{% else %}/projects/welcome-fries/{% endif %}" class="work-item__link">
+                {% if lang == 'nl' %}
+                    Meer info
+                {% else %}
+                    View full case
+                {% endif %}
             </a>
         </nav>
 

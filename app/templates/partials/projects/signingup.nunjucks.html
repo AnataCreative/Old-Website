@@ -7,12 +7,20 @@
         </header>
 
         <p class="work-item__intro">
-            Signing Up will be a crash course in sign language. It will be focused on VGT or Flemish Sign Language. This project is still under development, but be sure to take a look at the teaser-site and subscribe for more news.
+            {% if lang == 'nl' %}
+                Signing Up wordt een spoedcursus gebarentaal. Deze zal (voorlopig) gericht zijn op het Vlaamse Gebarentaal. Samen met Lucy zal je op een leuke manier de basis leren zoals het alfabet en enkele handige woordjes en zinnen.
+            {% else %}
+                Signing Up will be a crash course in sign language. It will be focused on VGT or Flemish Sign Language. This project is still under development, but be sure to take a look at the teaser-site and subscribe for more news.
+            {% endif %}
         </p>
 
         <nav>
             <a href="https://signingup.be/" class="work-item__link" target="_blank">
-                View website
+                {% if lang == 'nl' %}
+                    Bekijk de website
+                {% else %}
+                    View website
+                {% endif %}
             </a>
         </nav>
 

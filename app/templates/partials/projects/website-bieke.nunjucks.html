@@ -7,15 +7,27 @@
         </header>
 
         <p class="work-item__intro">
-            Together with Bieke, we created a website to boost her business. The goal was to lower the hurdle for potential clients to make an appointment and to boost work inquiries.
+            {% if lang == 'nl' %}
+                Samen met Bieke hebben we een website gemaakt om haar zaak een boost te geven. Doelstelling was om het gemakkelijker te maken voor de klanten om een afspraak te maken.
+            {% else %}
+                Together with Bieke, we created a website to boost her business. The goal was to lower the hurdle for potential clients to make an appointment and to boost work inquiries.
+            {% endif %}
         </p>
 
         <nav>
-            <a href="/projects/website-bieke-dejonghe/" class="work-item__link">
-                View full case
+            <a href="{% if lang == 'nl' %}/nl/projecten/website-bieke-dejonghe/{% else %}/projects/website-bieke-dejonghe/{% endif %}" class="work-item__link">
+                {% if lang == 'nl' %}
+                    Meer info
+                {% else %}
+                    View full case
+                {% endif %}
             </a>
             <a href="http://biekedejonghe.be" class="work-item__link" target="_blank">
-                View website
+                {% if lang == 'nl' %}
+                    Bekijk de website
+                {% else %}
+                    View website
+                {% endif %}
             </a>
         </nav>
 
