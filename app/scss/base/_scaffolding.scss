@@ -50,3 +50,9 @@
         flex: 0 0 50%;
     }
 }
+
+.col--md-4 {
+    @include media-breakpoint-up(md) {
+        flex: 0 0 33%;
+    }
+}

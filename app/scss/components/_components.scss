@@ -33,11 +33,13 @@
         "structures/project",
         "structures/opportunities",
         "structures/contact",
-        "structures/lang-nav";
+        "structures/lang-nav",
+        "structures/preloader";
 
 
 /* Main
    ========================================================================== */
 @import "main/main-header",
         "main/main-nav",
+        "main/main-content",
         "main/main-footer";

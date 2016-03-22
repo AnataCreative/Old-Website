@@ -11,6 +11,7 @@
     "img": "<=resourcesPath>img/**/*.{png,jpg,jpeg,gif,svg,webp}",
     "fonts": "<=resourcesPath>fonts/**/*.{eot,ttf,woff,woff2}",
     "js": [
+        "<=bowerComponentsPath>/velocity/velocity.js",
         "<=resourcesPath>js/scope.js",
         "<=resourcesPath>js/components/*.js",
         "<=resourcesPath>js/app.js"

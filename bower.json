@@ -2,6 +2,7 @@
     "name": "AnataCreative",
     "version": "1.0.0",
     "dependencies": {
-        "vanilla-lazyload": "1.5"
+        "vanilla-lazyload": "1.5",
+        "velocity": "~1.2"
     }
 }

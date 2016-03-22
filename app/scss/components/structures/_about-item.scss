@@ -90,6 +90,14 @@
     }
 }
 
+.about-item__title--sm {
+    font-size: rem-calc(24);
+
+    @include media-breakpoint-up(md) {
+        font-size: rem-calc(26);
+    }
+}
+
 
 /* Intro
    ========================================================================== */
@@ -98,11 +106,15 @@
     max-width: rem-calc(500);
     margin: 0 auto;
 
+    @include media-breakpoint-up(md) {
+        max-width: 90%;
+    }
+}
+
+.about-item__info--lg {
     font-size: rem-calc(18);
 
     @include media-breakpoint-up(md) {
-        max-width: 90%;
-
         font-size: rem-calc(20);
     }
 }

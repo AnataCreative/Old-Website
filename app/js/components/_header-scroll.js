@@ -38,8 +38,8 @@ anatacreative.headerScroll = function(undefined) {
     };
 
 
-    // Init
-    var init = function() {
+    // Reinit
+    exports.initScroll = function() {
         scrollHeaderImg = document.getElementById('scroll-header-img');
         scrollHeaderCaption = document.getElementById('scroll-header-caption');
 
@@ -50,5 +50,11 @@ anatacreative.headerScroll = function(undefined) {
         if (scrollHeaderCaption) {
             hasCaption = true;
         }
+    };
+
+
+    // Init
+    var init = function() {
+        exports.initScroll();
     }();
 };
