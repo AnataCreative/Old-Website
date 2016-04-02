@@ -53,19 +53,12 @@ anatacreative.forms = function(undefined) {
 
 
 
-    // Init Form
-    exports.initForm = function() {
+    // Init
+    var init = function() {
         form = document.getElementById('form');
 
         if (form) {
             setup();
         }
-    };
-
-
-
-    // Init
-    var init = function() {
-        exports.initForm();
     }();
 };

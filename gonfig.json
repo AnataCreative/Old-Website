@@ -8,7 +8,7 @@
     "templateBase": "<=resourcesPath>templates/",
     "templatePages": "<=resourcesPath>templates/pages/**/*.html",
     "scss": "<=resourcesPath>scss/**/*.scss",
-    "img": "<=resourcesPath>img/**/*.{png,jpg,jpeg,gif,svg,webp}",
+    "img": "<=resourcesPath>img/**/*.{png,jpg,jpeg,gif,svg,webp,gif}",
     "fonts": "<=resourcesPath>fonts/**/*.{eot,ttf,woff,woff2}",
     "js": [
         "<=bowerComponentsPath>/velocity/velocity.js",
