@@ -4,36 +4,43 @@
         "resourcesPath": "app/"
     },
 
-    "templates": "<=resourcesPath>templates/**/*.html",
-    "templateBase": "<=resourcesPath>templates/",
-    "templatePages": "<=resourcesPath>templates/pages/**/*.html",
     "scss": "<=resourcesPath>scss/**/*.scss",
     "img": "<=resourcesPath>img/**/*.{png,jpg,jpeg,gif,svg,webp,gif}",
     "fonts": "<=resourcesPath>fonts/**/*.{eot,ttf,woff,woff2}",
-    "js": [
-        "<=bowerComponentsPath>/velocity/velocity.js",
-        "<=resourcesPath>js/scope.js",
-        "<=resourcesPath>js/components/*.js",
-        "<=resourcesPath>js/app.js"
-    ],
-    "otherJs": "<=resourcesPath>js/other/*.js",
+
+    "js": {
+        "vendors": [
+            "<=bowerComponentsPath>/velocity/velocity.js"
+        ],
+        "app": [
+            "<=resourcesPath>js/_scope.js",
+            "<=resourcesPath>js/components/*.js",
+            "<=resourcesPath>js/app.js"
+        ],
+        "other": "<=resourcesPath>js/other/*.js"
+    },
+
+    "templates": {
+        "baseFolder": "<=resourcesPath>templates/",
+        "pages": "<=resourcesPath>templates/pages/**/*.html",
+        "watchFiles": "<=resourcesPath>templates/**/*.html"
+    },
 
     "dist": {
-        "templates": "",
         "css": "<=distPath>css",
         "js": "<=distPath>js",
         "img": "<=distPath>img",
-        "fonts": "<=distPath>fonts"
+        "fonts": "<=distPath>fonts",
+        "templates": "<=distPath>"
     },
 
     "browserSupport": [
         "last 2 versions",
-        "ie >= 9"
+        "ie 9-11"
     ],
 
     "liveReloadFiles": [
         "<=distPath>css/style.min.css",
-        "<=distPath>js/*.js",
-        "<=distPath>*.html"
+        "<=distPath>js/*.js"
     ]
 }

@@ -36,6 +36,15 @@ var del = require('del');
 // Chalk for the errorlogger
 var chalk = require('chalk');
 
+// Stylish JS-hint reporter
+var jshintStylish = require('jshint-stylish');
+
+// Load the notifier.
+var notifier = require('node-notifier');
+
+// Is build
+var isBuild = false;
+
 
 
 /* Load config (Credits @DaanPoron)
@@ -60,7 +69,7 @@ config = JSON.parse(config);
 
 /* Errorhandling (Credits @JensGyselinck)
    ========================================================================== */
-var errorLogger = function(headerMessage, errorMessage) {
+var errorLogger = function(headerMessage, errorMessage, write) {
     var i = 0,
         boxLines = '';
 
@@ -68,7 +77,19 @@ var errorLogger = function(headerMessage, errorMessage) {
         boxLines += '=';
     }
 
-    plugins.util.log('\n' + chalk.red(boxLines + '\n# ') + headerMessage + chalk.red(' #\n' + boxLines) + '\n ' + chalk.blue(errorMessage) + '\n');
+    if (write) {
+        plugins.util.log('\n' + chalk.red(boxLines + '\n# ') + headerMessage + chalk.red(' #\n' + boxLines) + '\n ' + chalk.blue(errorMessage) + '\n');
+    }
+
+    if (config.showErrorNotifications) {
+
+        notifier.notify({
+            'title': headerMessage,
+            'message': errorMessage,
+            'icon':  __dirname + '/gulp_error.jpg',
+            'sound': true
+        });
+    }
 };
 
 
@@ -79,8 +100,11 @@ var errorLogger = function(headerMessage, errorMessage) {
 gulp.task('styles', function() {
     return gulp.src(config.scss)
         // Sass
-        .pipe(plugins.sass()).on('error', function(err) {
-            errorLogger('Styles Error', err);
+        .pipe(plugins.sass())
+
+        // Error catch
+        .on('error', function(err) {
+            errorLogger('Styles Error', err.message, true);
             this.emit('end');
         })
 
@@ -91,7 +115,7 @@ gulp.task('styles', function() {
         .pipe(plugins.autoprefixer(config.browserSupport))
 
         // Minify output
-        .pipe(plugins.minifyCss())
+        .pipe(plugins.cssnano())
 
         // Rename the file to respect naming covention.
         .pipe(plugins.rename(function(path) {
@@ -109,15 +133,20 @@ gulp.task('styles', function() {
 
 
 // JS
-gulp.task('scripts', function() {
-    return gulp.src(config.js)
-        // Uglify
-        .pipe(plugins.uglify({
-            mangle: {
-                except: ['jQuery']
-            }
-        })).on('error', function(err) {
-            errorLogger('Javascript Error', err);
+gulp.task('js', function() {
+    return gulp.src(config.js.vendors.concat(config.js.app))
+        // Uglify (only on build)
+        .pipe(plugins.if(isBuild,
+            plugins.uglify({
+                mangle: {
+                    except: ['jQuery']
+                }
+            })
+        ))
+
+        // Error catch
+        .on('error', function(err) {
+            errorLogger('Error inside task "js"', err.message, true);
             this.emit('end');
         })
 
@@ -135,15 +164,20 @@ gulp.task('scripts', function() {
 
 
 // JS - Other
-gulp.task('other-scripts', function() {
-    return gulp.src(config.otherJs)
-        // Uglify
-        .pipe(plugins.uglify({
-            mangle: {
-                except: ['jQuery']
-            }
-        })).on('error', function(err) {
-            errorLogger('Javascript Error', err);
+gulp.task('other-js', function() {
+    return gulp.src(config.js.other)
+        // Uglify (only on build)
+        .pipe(plugins.if(isBuild,
+            plugins.uglify({
+                mangle: {
+                    except: ['jQuery']
+                }
+            })
+        ))
+
+        // Error catch
+        .on('error', function(err) {
+            errorLogger('Error inside task "other-js"', err.message, true);
             this.emit('end');
         })
 
@@ -154,6 +188,26 @@ gulp.task('other-scripts', function() {
         .pipe(plugins.size({
             title: 'js - other'
         }));
+});
+
+
+// JS - Checks
+gulp.task('js-check', function() {
+    return gulp.src(config.js.app)
+        // Check with jshint
+        .pipe(plugins.jshint())
+
+        // Report trough jshintStylish
+        .pipe(plugins.jshint.reporter(jshintStylish))
+
+        // Fail task
+        .pipe(plugins.jshint.reporter('fail'))
+
+        // Error catch
+        .on('error', function(err) {
+            errorLogger('Error inside taks "js-check"', err.message, false);
+            this.emit('end');
+        })
 });
 
 
@@ -182,30 +236,6 @@ gulp.task('images', function() {
 });
 
 
-// Templates
-gulp.task('templates', function() {
-    plugins.nunjucksRender.nunjucks.configure([config.templateBase], {watch: false});
-
-    return gulp.src(config.templatePages)
-        // Render
-        .pipe(plugins.nunjucksRender())
-
-        // Minify html
-        .pipe(plugins.htmlmin({
-            collapseWhitespace: true
-        }))
-
-        // Rename the file to respect naming covention.
-        .pipe(plugins.rename(function(path) {
-            path.basename = path.basename.split('.nunjucks')[0];
-            path.extname = ".html"
-        }))
-
-        // Set destination
-        .pipe(gulp.dest(config.dist.templates))
-});
-
-
 // Video
 gulp.task('fonts', function() {
     return gulp.src(config.fonts)
@@ -219,9 +249,40 @@ gulp.task('fonts', function() {
 });
 
 
+// Templates
+gulp.task('templates', function() {
+
+    return gulp.src(config.templates.pages)
+        // Render
+        .pipe(plugins.nunjucksRender({
+            path: config.templates.baseFolder
+        }))
+
+        // Error catch
+        .on('error', function(err) {
+            errorLogger('Templates Error', err.message, true);
+            this.emit('end');
+        })
+
+        // Minify html
+        .pipe(plugins.htmlmin({
+            collapseWhitespace: true
+        }))
+
+        // Rename
+        .pipe(plugins.rename(function(path) {
+            path.basename = path.basename.split('.nunjucks')[0];
+            path.extname = ".html"
+        }))
+
+        // Set destination
+        .pipe(gulp.dest(config.dist.templates))
+});
+
+
 // Clean
 gulp.task('clean', function(done) {
-    del([distPath + '**'], done);
+    return del([distPath + '**']);
 });
 
 
@@ -236,10 +297,10 @@ gulp.task('watch', function() {
 
     // Watch
     gulp.watch(config.scss, ['styles']);
-    gulp.watch(config.js, ['scripts']);
+    gulp.watch(config.js.app, ['js-check', 'js']);
     gulp.watch(config.img, ['images']);
-    gulp.watch(config.video, ['fonts']);
-    gulp.watch(config.templates, ['templates']);
+    gulp.watch(config.fonts, ['fonts']);
+    gulp.watch(config.templates.watchFiles, ['templates']);
 });
 
 
@@ -254,9 +315,11 @@ gulp.task('connect', function() {
 
 // Default
 gulp.task('default', function(done) {
+    isBuild = false;
+
     runSequence(
         'clean',
-        ['styles', 'scripts', 'other-scripts', 'images', 'fonts', 'templates'],
+        ['styles', 'js-check', 'js', 'other-js', 'images', 'fonts', 'templates'],
         ['connect', 'watch'],
     done);
 });
@@ -264,9 +327,11 @@ gulp.task('default', function(done) {
 
 // Build
 gulp.task('build', function(done) {
+    isBuild = true;
+
     runSequence(
         'clean',
-        ['styles', 'scripts', 'other-scripts', 'images', 'fonts', 'templates'],
+        ['styles', 'js', 'other-js', 'images', 'fonts', 'templates'],
     done);
 });
 

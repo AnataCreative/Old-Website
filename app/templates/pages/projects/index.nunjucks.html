@@ -1,7 +1,8 @@
-{% extends "layout.nunjucks.html" %}
+{% set lang = "en" %}
+{% set pageTitle = "Projects - " %}
+{% set pageTeaser = "We love to make something unique. Take a peak at our work." %}
 
-{% block pagetitle %}Projects - {% endblock %}
-{% block pageteaser %}We love to make something unique. Take a peak at our work.{% endblock %}
+{% extends "layout.nunjucks.html" %}
 
 {% block header %}
     <!-- Lang nav -->
@@ -15,9 +16,6 @@
     <header class="page-header">
         <figure>
             <img src="/dist/img/projects/header.jpg" alt="Projects" id="scroll-header-img" class="page-header__img">
-            {# <!--
-            <img sizes="100vw" srcset="/dist/img/projects/header.jpg 700w, /dist/img/projects/header.jpg 1400w" alt="Projects" id="scroll-header-img" class="page-header__img">
-            --> #}
             <figcaption id="scroll-header-caption" class="page-header__caption">
                 <h1 class="page-header__caption__title page-header__caption__title--shadow">
                     Projects
