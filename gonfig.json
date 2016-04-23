@@ -27,10 +27,10 @@
     },
 
     "dist": {
-        "css": "<=distPath>css",
-        "js": "<=distPath>js",
-        "img": "<=distPath>img",
-        "fonts": "<=distPath>fonts",
+        "css": "<=distPath>assets/css",
+        "js": "<=distPath>assets/js",
+        "img": "<=distPath>assets/img",
+        "fonts": "<=distPath>assets/fonts",
         "templates": "<=distPath>"
     },
 
@@ -40,7 +40,7 @@
     ],
 
     "liveReloadFiles": [
-        "<=distPath>css/style.min.css",
-        "<=distPath>js/*.js"
+        "<=distPath>assets/css/style.min.css",
+        "<=distPath>assets/js/*.js"
     ]
 }
