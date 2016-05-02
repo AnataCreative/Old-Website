@@ -1,0 +1,40 @@
+{% set lang = "en" %}
+{% set pageTitle = "" %}
+{% set pageTeaser = "We are a small creative agency that crafts beautiful websites and awesome illustrations. We listen. We understand. We care." %}
+
+{% extends "layout.nunjucks.html" %}
+
+{% block header %}
+    <!-- Lang nav -->
+    <nav class="lang-nav">
+        <a href="/nl/" class="lang-nav__link">
+            nl
+        </a>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <figure>
+            <img src="/assets/img/contact/header.jpg" alt="Contact" id="scroll-header-img" class="page-header__img">
+            <figcaption id="scroll-header-caption" class="page-header__caption">
+                <h1 class="page-header__caption__title page-header__caption__title--shadow">
+                    404
+                </h1>
+            </figcaption>
+        </figure>
+    </header>
+
+    <!-- Nav -->
+    {% import 'macros/nav.nunjucks.html' as navigation %}
+    {{navigation.nav('home','en')}}
+{% endblock %}
+
+
+{% block content %}
+    <main role="main">
+        <!-- Intro -->
+        <p class="intro">
+            You seem to be lost. Nothing here. Please go to the <a href="/">homepage</a> to get you started.
+        </p>
+    </main>
+{% endblock %}
