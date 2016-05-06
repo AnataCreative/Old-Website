@@ -43,7 +43,6 @@
     font-size: rem-calc(14);
     text-transform: uppercase;
     letter-spacing: .1em;
-
 }
 
 .contact__info__details {
@@ -55,4 +54,10 @@
 .contact__info__details__link {
     color: $black;
     text-decoration: none;
+
+    transition: color .3s ease;
+
+    &:hover, &:focus {
+        color: #86aedd;
+    }
 }
