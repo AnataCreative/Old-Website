@@ -6,7 +6,7 @@ anatacreative.headerScroll = function(undefined) {
 
     var exports = this.headerScroll;
 
-    var hasHeader = false,
+    var hasHeaderImg = false,
         hasCaption = false;
 
     var scrollHeaderImg,
@@ -15,7 +15,7 @@ anatacreative.headerScroll = function(undefined) {
 
     // Private function
     var transform = function(offset) {
-        if (hasHeader) {
+        if (hasHeaderImg) {
             scrollHeaderImg.style.webkitTransform = 'translate3d(-50%, ' + offset/6 + 'px, 0)';
             scrollHeaderImg.style.transform = 'translate3d(-50%, ' + offset/6 + 'px, 0)';
         }
@@ -32,7 +32,7 @@ anatacreative.headerScroll = function(undefined) {
     // Public function
     exports.updateScroll = function(currentOffset) {
 
-        if (hasHeader  && currentOffset < 420) {
+        if (hasHeaderImg || scrollHeaderCaption && currentOffset < 420) {
             transform(currentOffset);
         }
     };
@@ -44,7 +44,7 @@ anatacreative.headerScroll = function(undefined) {
         scrollHeaderCaption = document.getElementById('scroll-header-caption');
 
         if (scrollHeaderImg) {
-            hasHeader = true;
+            hasHeaderImg = true;
         }
 
         if (scrollHeaderCaption) {
