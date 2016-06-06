@@ -1,20 +1,11 @@
 {% set lang = "nl" %}
+{% set homepage = "true" %}
 {% set pageTitle = "" %}
 {% set pageTeaser = "Anata Creative is een creatief bureau dat mooie websites en prachtige illustraties maakt. Wij gaan mee in jouw verhaal." %}
 
 {% extends "layout.nunjucks.html" %}
 
-{% block header %}
-    <!-- Lang nav -->
-    <nav class="lang-nav">
-        <a href="/" class="lang-nav__link">
-            en
-        </a>
-    </nav>
-
-    <!-- Header -->
-    {% include 'partials/home/header.nunjucks.html' %}
-
+{% block nav %}
     <!-- Nav -->
     {% import 'macros/nav.nunjucks.html' as navigation %}
     {{navigation.nav('home','nl')}}

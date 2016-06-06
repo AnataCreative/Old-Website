@@ -5,6 +5,10 @@
 
 /* General
    ========================================================================== */
-// .main-content {
-//     will-change: opacity, transform;
-// }
+.main-content {
+    position: relative;
+
+    overflow: hidden;
+
+    will-change: opacity;
+}

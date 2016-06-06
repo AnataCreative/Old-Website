@@ -4,23 +4,7 @@
 
 {% extends "layout.nunjucks.html" %}
 
-{% block header %}
-    <!-- Lang nav -->
-    <nav class="lang-nav">
-        <a href="/nl/projecten/welkom-fries/" class="lang-nav__link">
-            nl
-        </a>
-    </nav>
-
-    <!-- Header -->
-    <header class="page-header page-header--fries">
-        <div id="scroll-header-caption" class="page-header__caption">
-            <h1 class="page-header__caption__title">
-                Welcome Fries
-            </h1>
-        </div>
-    </header>
-
+{% block nav %}
     <!-- Nav -->
     {% import 'macros/nav.nunjucks.html' as navigation %}
     {{navigation.nav('projects','en')}}
@@ -29,8 +13,19 @@
 
 {% block content %}
     <main role="main">
-        <article class="project">
+        <!-- Header -->
+        <header class="project-header">
+            <figure>
+                <img src="/assets/img/projects/geboorte-fries/project-header.jpg" alt="Welcome Fries - Anata Creative" title="Welcome Fries - Anata Creative" class="project-header__img">
+                <figcaption class="project-header__caption">
+                    <h1 class="project-header__caption__title">
+                        Welcome Fries
+                    </h1>
+                </figcaption>
+            </figure>
+        </header>
 
+        <article class="project">
             <!-- Intro -->
             <p class="project__intro">
                 What a beautifull day it was, when Fries came to the big world. Together with the parents, we crafted the birth announcement to notify the world.

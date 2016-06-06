@@ -4,23 +4,7 @@
 
 {% extends "layout.nunjucks.html" %}
 
-{% block header %}
-    <!-- Lang nav -->
-    <nav class="lang-nav">
-        <a href="/projects/ksa-t-vlinderke/" class="lang-nav__link">
-            en
-        </a>
-    </nav>
-
-    <!-- Header -->
-    <header class="page-header page-header--ksa">
-        <div id="scroll-header-caption" class="page-header__caption">
-            <h1 class="page-header__caption__title">
-                KSA &lsquo;t Vlinderke
-            </h1>
-        </div>
-    </header>
-
+{% block nav %}
     <!-- Nav -->
     {% import 'macros/nav.nunjucks.html' as navigation %}
     {{navigation.nav('projects','nl')}}
@@ -29,8 +13,19 @@
 
 {% block content %}
     <main role="main">
-        <article class="project">
+        <!-- Header -->
+        <header class="page-header">
+            <figure>
+                <img src="/assets/img/projects/ksa-tvlinderke/project-header.jpg" alt="KSA 't Vlinderke - Anata Creative" title="KSA 't Vlinderke - Anata Creative" class="page-header__img">
+                <figcaption class="page-header__caption">
+                    <h1 class="page-header__caption__title">
+                        KSA &lsquo;t Vlinderke
+                    </h1>
+                </figcaption>
+            </figure>
+        </header>
 
+        <article class="project">
             <!-- Intro -->
             <p class="project__intro">
                 We hebben het geluk gehad om lang deel uit te maken van deze prachtige jeugdbeweging. Deze verdiende dan vanzelfsprekend, een mooie en vrolijke website!

@@ -4,23 +4,7 @@
 
 {% extends "layout.nunjucks.html" %}
 
-{% block header %}
-    <!-- Lang nav -->
-    <nav class="lang-nav">
-        <a href="/contact/" class="lang-nav__link">
-            en
-        </a>
-    </nav>
-
-    <!-- Header -->
-    <header class="page-header page-header--contact">
-        <div id="scroll-header-caption" class="page-header__caption">
-            <h1 class="page-header__caption__title">
-                Contact
-            </h1>
-        </div>
-    </header>
-
+{% block nav %}
     <!-- Nav -->
     {% import 'macros/nav.nunjucks.html' as navigation %}
     {{navigation.nav('contact','nl')}}
@@ -29,6 +13,11 @@
 
 {% block content %}
     <main role="main">
+        <header>
+            <h1 class="page-header">
+                Contact
+            </h1>
+        </header>
         <article class="contact">
             <header>
                 <h2 class="intro intro--center contact__intro">

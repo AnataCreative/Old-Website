@@ -12,7 +12,7 @@
     font-size: rem-calc(23);
     font-weight: normal;
     color: $black;
-    text-align: left;
+    text-align: center;
 
     strong {
         font-weight: normal;
@@ -30,7 +30,6 @@
         padding: 5em rem-calc(30) 5.5em;
 
         font-size: rem-calc(30);
-        text-align: left;
 
         strong {
             position: relative;
@@ -52,14 +51,5 @@
                 white-space: nowrap;
             }
         }
-    }
-}
-
-
-.intro--center {
-    text-align: center;
-
-    @include media-breakpoint-up(md) {
-        text-align: center;
     }
 }

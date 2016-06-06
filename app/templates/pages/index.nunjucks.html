@@ -1,20 +1,11 @@
 {% set lang = "en" %}
+{% set homepage = "true" %}
 {% set pageTitle = "" %}
 {% set pageTeaser = "We are a small creative agency that crafts beautiful websites and awesome illustrations. We listen. We understand. We care." %}
 
 {% extends "layout.nunjucks.html" %}
 
-{% block header %}
-    <!-- Lang nav -->
-    <nav class="lang-nav">
-        <a href="/nl/" class="lang-nav__link">
-            nl
-        </a>
-    </nav>
-
-    <!-- Header -->
-    {% include 'partials/home/header.nunjucks.html' %}
-
+{% block nav %}
     <!-- Nav -->
     {% import 'macros/nav.nunjucks.html' as navigation %}
     {{navigation.nav('home','en')}}

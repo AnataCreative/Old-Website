@@ -45,7 +45,7 @@
     max-width: rem-calc(50);
 
     @include media-breakpoint-up(md) {
-        max-width: rem-calc(80);
+        max-width: rem-calc(100);
     }
 }
 

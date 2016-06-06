@@ -1,0 +1,88 @@
+/* ==========================================================================
+   Project header
+   ========================================================================== */
+
+
+/* General
+   ========================================================================== */
+.project-header {
+    position: relative;
+    height: rem-calc(220);
+
+    overflow: hidden;
+
+    background: #030306;
+
+    @include media-breakpoint-up(sm) {
+        height: rem-calc(400);
+    }
+}
+
+
+
+
+/* Image
+   ========================================================================== */
+.project-header__img {
+    z-index: 1;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+
+    display: block;
+    width: auto;
+    height: auto;
+    min-height: calc(100% + 30px);
+    min-width: 100%;
+    max-width: none;
+    max-height: none;
+
+    transform: translate3d(-50%, 0, 0);
+}
+
+
+
+
+/* Caption
+   ========================================================================== */
+// Caption
+.project-header__caption {
+    z-index: 2;
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    transform: translate3d(0, 0, 0);
+}
+
+
+// Title
+.project-header__caption__title {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 100%;
+    margin: 0;
+    padding: 0 rem-calc(20);
+
+    font-size: rem-calc(30);
+    line-height: 1.2;
+    text-align: center;
+    color: $white;
+
+    transform: translate3d(-50%, -50%, 0);
+
+    @include media-breakpoint-up(sm) {
+        font-size: rem-calc(44);
+    }
+
+    @include media-breakpoint-up(md) {
+        font-size: rem-calc(72);
+    }
+}

@@ -4,26 +4,7 @@
 
 {% extends "layout.nunjucks.html" %}
 
-{% block header %}
-    <!-- Lang nav -->
-    <nav class="lang-nav">
-        <a href="/nl/" class="lang-nav__link">
-            nl
-        </a>
-    </nav>
-
-    <!-- Header -->
-    <header class="page-header">
-        <figure>
-            <img src="/assets/img/contact/header.jpg" alt="Contact" id="scroll-header-img" class="page-header__img">
-            <figcaption id="scroll-header-caption" class="page-header__caption">
-                <h1 class="page-header__caption__title page-header__caption__title--shadow">
-                    404
-                </h1>
-            </figcaption>
-        </figure>
-    </header>
-
+{% block nav %}
     <!-- Nav -->
     {% import 'macros/nav.nunjucks.html' as navigation %}
     {{navigation.nav('home','en')}}

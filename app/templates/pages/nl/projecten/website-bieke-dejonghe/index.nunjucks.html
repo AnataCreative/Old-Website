@@ -4,23 +4,7 @@
 
 {% extends "layout.nunjucks.html" %}
 
-{% block header %}
-    <!-- Lang nav -->
-    <nav class="lang-nav">
-        <a href="/projects/website-bieke-dejonghe/" class="lang-nav__link">
-            en
-        </a>
-    </nav>
-
-    <!-- Header -->
-    <header class="page-header page-header--bieke">
-        <div id="scroll-header-caption" class="page-header__caption">
-            <h1 class="page-header__caption__title">
-                Biekedejonghe.be
-            </h1>
-        </div>
-    </header>
-
+{% block nav %}
     <!-- Nav -->
     {% import 'macros/nav.nunjucks.html' as navigation %}
     {{navigation.nav('projects','nl')}}
@@ -29,8 +13,19 @@
 
 {% block content %}
     <main role="main">
-        <article class="project">
+        <!-- Header -->
+        <header class="project-header">
+            <figure>
+                <img src="/assets/img/projects/bieke-website/project-header.jpg" alt="Website Biekedejonghe.be - Anata Creative" title="Website Biekedejonghe.be - Anata Creative" class="project-header__img">
+                <figcaption class="project-header__caption">
+                    <h1 class="project-header__caption__title">
+                        Biekedejonghe.be
+                    </h1>
+                </figcaption>
+            </figure>
+        </header>
 
+        <article class="project">
             <!-- Intro -->
             <p class="project__intro">
                 Samen met Bieke hebben we een website in leven geroepen om haar eigen zaak ook online in de kijker te zetten. Deze heeft als doel de klanten sneller te informeren zodat ze vlugger een afspraak zullen maken.

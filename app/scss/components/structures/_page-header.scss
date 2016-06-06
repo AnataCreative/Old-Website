@@ -6,107 +6,17 @@
 /* General
    ========================================================================== */
 .page-header {
-    position: relative;
-    height: rem-calc(220);
-
-    overflow: hidden;
-
-    background: #030306;
-
-    @include media-breakpoint-up(sm) {
-        height: rem-calc(400);
-    }
-}
-
-.page-header--about {
-    background: #a1e7ff;
-}
-
-.page-header--projects {
-    background: #a2f9cf;
-}
-
-.page-header--contact {
-    background: #d4a9ff;
-}
-
-.page-header--bieke {
-    background: #d189d6;
-}
-
-.page-header--fries {
-    background: #c4e88d;
-}
-
-.page-header--ksa {
-    background: #ffbc5a;
-}
-
-
-/* Image
-   ========================================================================== */
-.page-header__img {
-    z-index: 1;
+    z-index: -1;
     position: absolute;
-    top: 0;
-    left: 50%;
+    top: calc(-6vw + 1.5rem);
+    left: -#{rem-calc(35)};
 
     display: block;
-    width: auto;
-    height: 100%;
-    max-width: none;
-    max-height: none;
-
-    transform: translate3d(-50%, 0, 0);
-}
-
-
-
-
-/* Caption
-   ========================================================================== */
-// Caption
-.page-header__caption {
-    z-index: 2;
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    transform: translate3d(0, 0, 0);
-}
-
-
-// Title
-.page-header__caption__title {
-    z-index: 2;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    width: 100%;
     margin: 0;
-    padding: 0 rem-calc(20);
+    padding: 0;
 
-    font-size: rem-calc(30);
-    line-height: 1.2;
-    text-align: center;
-    color: $white;
-
-    transform: translate3d(-50%, -50%, 0);
-
-    @include media-breakpoint-up(sm) {
-        font-size: rem-calc(44);
-    }
-
-    @include media-breakpoint-up(md) {
-        font-size: rem-calc(72);
-    }
-}
-
-.page-header__caption__title--shadow {
-    text-shadow: 0 0 100px rgba(0, 0, 0, .8);
+    font-size: 25vw;
+    line-height: 1;
+    color: #f9f9f9;
+    white-space: nowrap;
 }
