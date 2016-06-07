@@ -8,29 +8,41 @@
                 </svg>
             </a>
         {% endif %}
-        <a href="{% if activeLang == 'nl' %}/nl/projecten/{% else %}/projects/{% endif %}" class="js-internal-link main-nav__item{%if activePage == 'projects' %} main-nav__item--active{% endif %}">
-            {% if activeLang == 'nl' %}
-                Projecten
-            {% else %}
-                Projects
-            {% endif %}
-        </a>
-        <a href="{% if activeLang == 'nl' %}/nl/playground/{% else %}/playground/{% endif %}" class="js-internal-link main-nav__item{%if activePage == 'playground' %} main-nav__item--active{% endif %}">
-            {% if activeLang == 'nl' %}
-                Playground
-            {% else %}
-                Playground
-            {% endif %}
-        </a>
-        <a href="{% if activeLang == 'nl' %}/nl/over-ons/{% else %}/about/{% endif %}" class="js-internal-link main-nav__item{%if activePage == 'about' %} main-nav__item--active{% endif %}">
-            {% if activeLang == 'nl' %}
-                Over ons
-            {% else %}
-                About
-            {% endif %}
-        </a>
-        <a href="{% if activeLang == 'nl' %}/nl/contact/{% else %}/contact/{% endif %}" class="js-internal-link main-nav__item{%if activePage == 'contact' %} main-nav__item--active{% endif %}">
-            Contact
-        </a>
+        <button type="button" id="main-nav-mobile-toggle" class="main-nav__mobile-toggle">
+            Menu
+        </button>
+        <div id="main-nav-mobile-container" class="main-nav__mobile-container">
+            <a href="{% if activeLang == 'nl' %}/nl/projecten/{% else %}/projects/{% endif %}" class="js-internal-link main-nav__item{%if activePage == 'projects' %} main-nav__item--active{% endif %}">
+                {% if activeLang == 'nl' %}
+                    Projecten
+                {% else %}
+                    Projects
+                {% endif %}
+            </a>
+            <a href="{% if activeLang == 'nl' %}/nl/playground/{% else %}/playground/{% endif %}" class="js-internal-link main-nav__item{%if activePage == 'playground' %} main-nav__item--active{% endif %}">
+                {% if activeLang == 'nl' %}
+                    Playground
+                {% else %}
+                    Playground
+                {% endif %}
+            </a>
+            <a href="{% if activeLang == 'nl' %}/nl/over-ons/{% else %}/about/{% endif %}" class="js-internal-link main-nav__item{%if activePage == 'about' %} main-nav__item--active{% endif %}">
+                {% if activeLang == 'nl' %}
+                    Over ons
+                {% else %}
+                    About
+                {% endif %}
+            </a>
+            <a href="{% if activeLang == 'nl' %}/nl/contact/{% else %}/contact/{% endif %}" class="js-internal-link main-nav__item{%if activePage == 'contact' %} main-nav__item--active{% endif %}">
+                Contact
+            </a>
+            <a href="{% if activeLang == 'nl' %}/{% else %}/nl/{% endif %}" class="js-internal-link main-nav__item main-nav__item--lang">
+                {% if activeLang == 'nl' %}
+                    EN
+                {% else %}
+                    NL
+                {% endif %}
+            </a>
+        </div>
     </nav>
 {% endmacro %}
