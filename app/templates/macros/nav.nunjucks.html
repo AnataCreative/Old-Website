@@ -15,6 +15,13 @@
                 Projects
             {% endif %}
         </a>
+        <a href="{% if activeLang == 'nl' %}/nl/playground/{% else %}/playground/{% endif %}" class="js-internal-link main-nav__item{%if activePage == 'playground' %} main-nav__item--active{% endif %}">
+            {% if activeLang == 'nl' %}
+                Playground
+            {% else %}
+                Playground
+            {% endif %}
+        </a>
         <a href="{% if activeLang == 'nl' %}/nl/over-ons/{% else %}/about/{% endif %}" class="js-internal-link main-nav__item{%if activePage == 'about' %} main-nav__item--active{% endif %}">
             {% if activeLang == 'nl' %}
                 Over ons
