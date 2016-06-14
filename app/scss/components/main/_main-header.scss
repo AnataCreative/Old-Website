@@ -10,10 +10,24 @@
     background: #030306;
     height: 0;
     overflow: hidden;
+
+    transition: height .6s ease;
 }
 
 .home-header--active {
-    height: auto;
+    height: rem-calc(259);
+
+    @include media-breakpoint-up(sm) {
+        height: rem-calc(363);
+    }
+
+    @include media-breakpoint-up(md) {
+        height: rem-calc(483);
+    }
+
+    @include media-breakpoint-up(lg) {
+        height: rem-calc(543);
+    }
 }
 
 
@@ -21,22 +35,20 @@
 /* Title
    ========================================================================== */
 .home-header__title {
-    height: rem-calc(259);
     padding: 2em 0;
     margin: 0;
 
+    transform: translate3d(0, 0, 0);
+
     @include media-breakpoint-up(sm) {
-        height: rem-calc(363);
         padding: 4em 0;
     }
 
     @include media-breakpoint-up(md) {
-        height: rem-calc(483);
         padding: 5em 0;
     }
 
     @include media-breakpoint-up(lg) {
-        height: rem-calc(543);
         padding: 6em 0;
     }
 }

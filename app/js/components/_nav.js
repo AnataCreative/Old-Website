@@ -6,9 +6,9 @@ anatacreative.nav = function(undefined) {
 
     var exports = this.nav;
 
-    var mainContent;
+    var mainContent, homeHeader;
 
-    var mainNavLinks, filterLinks;
+    var mainNavLinks;
 
     var isNavigating = false;
 
@@ -147,10 +147,18 @@ anatacreative.nav = function(undefined) {
             if (link.href === targetUrl) {
                 hasActive = true;
                 link.classList.add('main-nav__item--active');
+
+                if (link.dataset.isHome) {
+                    homeHeader.classList.add('home-header--active');
+                } else {
+                    homeHeader.classList.remove('home-header--active');
+                }
             }
         });
 
         if (!hasActive) {
+            homeHeader.classList.remove('home-header--active');
+
             if (targetUrl.indexOf('projects') > -1 || targetUrl.indexOf('projecten') > -1) {
                 mainNavLinks[1].classList.add('main-nav__item--active');
             }
@@ -187,6 +195,7 @@ anatacreative.nav = function(undefined) {
     var init = function() {
 
         if (window.history && history.pushState) {
+            homeHeader = document.getElementById('home-header');
             mainContent = document.getElementById('main-content');
             mainNavLinks = document.querySelectorAll('.js-main-nav-link');
 
