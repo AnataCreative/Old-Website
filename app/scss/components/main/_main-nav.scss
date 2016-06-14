@@ -29,13 +29,36 @@
     border: 0;
     line-height: rem-calc(60);
 
-    opacity: .2;
+    opacity: .5;
+    color: #a6a6ad;
 
     &:hover, &:focus {
         outline: 0;
     }
 
     @include media-breakpoint-up(sm) {
+        display: none;
+    }
+}
+
+.main-nav__mobile-toggle__close {
+    display: none;
+    margin-right: .33em;
+}
+
+.main-nav__mobile-toggle__open {
+    display: inline-block;
+    margin-right: .2em;
+
+    opacity: .5;
+}
+
+.main-nav__mobile-toggle--active {
+    .main-nav__mobile-toggle__close {
+        display: inline-block;
+    }
+
+    .main-nav__mobile-toggle__open {
         display: none;
     }
 }

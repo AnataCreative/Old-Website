@@ -11,6 +11,7 @@ anatacreative.app = function(undefined) {
     var init = function() {
         anatacreative.menu();
         anatacreative.forms();
+        anatacreative.nav();
     }();
 };
 
