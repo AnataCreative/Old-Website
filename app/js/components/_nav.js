@@ -6,7 +6,7 @@ anatacreative.nav = function(undefined) {
 
     var exports = this.nav;
 
-    var mainContent, homeHeader;
+    var mainContent;
 
     var mainNavLinks;
 
@@ -14,7 +14,7 @@ anatacreative.nav = function(undefined) {
 
     var aniEasing = 'ease';
     var aniDuration = 100,
-        aniDuration2 = 200;
+        aniDuration2 = 500;
 
 
 
@@ -43,6 +43,9 @@ anatacreative.nav = function(undefined) {
             aniValues = {
                 opacity: [0, 1]
             };
+
+            // Close menu
+            anatacreative.menu.close();
 
             // Update Main Nav
             updateMainNavLinks(url);
@@ -126,7 +129,9 @@ anatacreative.nav = function(undefined) {
         document.body.classList.remove('content-loading');
 
         Velocity(mainContent, {
-            opacity: [1, 0]
+            opacity: [1, 0],
+            translateZ: 0,
+            translateY: [0, 2]
         }, {
             easing: aniEasing,
             duration: aniDuration2,
@@ -147,18 +152,10 @@ anatacreative.nav = function(undefined) {
             if (link.href === targetUrl) {
                 hasActive = true;
                 link.classList.add('main-nav__item--active');
-
-                if (link.dataset.isHome) {
-                    homeHeader.classList.add('home-header--active');
-                } else {
-                    homeHeader.classList.remove('home-header--active');
-                }
             }
         });
 
         if (!hasActive) {
-            homeHeader.classList.remove('home-header--active');
-
             if (targetUrl.indexOf('projects') > -1 || targetUrl.indexOf('projecten') > -1) {
                 mainNavLinks[1].classList.add('main-nav__item--active');
             }
@@ -171,6 +168,9 @@ anatacreative.nav = function(undefined) {
     var reset = function() {
         // Recatch links
         catchLinks();
+
+        // Get forms
+        anatacreative.forms();
 
         // Scroll reset
         document.body.scrollTop = 0;
@@ -195,7 +195,6 @@ anatacreative.nav = function(undefined) {
     var init = function() {
 
         if (window.history && history.pushState) {
-            homeHeader = document.getElementById('home-header');
             mainContent = document.getElementById('main-content');
             mainNavLinks = document.querySelectorAll('.js-main-nav-link');
 

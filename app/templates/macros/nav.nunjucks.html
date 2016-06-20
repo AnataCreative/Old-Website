@@ -1,6 +1,6 @@
 {% macro nav(activePage='home',activeLang='en') %}
     <div class="main-nav-container">
-        <nav role="navigation" class="main-nav{%if activePage != 'home' %} main-nav--fixed{% endif %}">
+        <nav role="navigation" class="main-nav">
             <a href="{% if activeLang == 'nl' %}/nl/{% else %}/{% endif %}" class="js-main-nav-link js-nav-link main-nav__home-link" data-is-home="true">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 338.58 496.84" class="main-nav__home-link__img">
                     <title>Anata Creative</title>

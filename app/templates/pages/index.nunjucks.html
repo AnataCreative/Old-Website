@@ -1,14 +1,22 @@
 {% set lang = "en" %}
-{% set homepage = "true" %}
 {% set pageTitle = "" %}
 {% set pageTeaser = "We are a small creative agency that crafts beautiful websites and awesome illustrations. We listen. We understand. We care." %}
 
 {% extends "layout.nunjucks.html" %}
 
 {% block nav %}
-    <!-- Nav -->
     {% import 'macros/nav.nunjucks.html' as navigation %}
     {{navigation.nav('home','en')}}
+{% endblock %}
+
+
+{% block header %}
+    <header id="home-header" class="home-header">
+        <h1 class="home-header__title">
+            {% include 'partials/home/logo.nunjucks.html' %}
+            <span class="sr-only">Anata Creative</span>
+        </h1>
+    </header>
 {% endblock %}
 
 
