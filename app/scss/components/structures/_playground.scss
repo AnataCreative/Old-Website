@@ -9,6 +9,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    align-items: center;
 
     margin: 0 auto 4rem;
 
@@ -22,25 +23,57 @@
 /* Item
    ========================================================================== */
 .playground__item {
-    flex: 1 0 90%;
+    flex: 0 0 100%;
 
     display: block;
-    margin: 0 1rem 1rem;
+    margin: 0;
     padding: 1em;
 
-    // border: 1px solid #f5f5f5;
-
     @include media-breakpoint-up(sm) {
-        flex: 1 0 40%;
+        flex: 0 0 50%;
     }
 
     @include media-breakpoint-up(md) {
-        flex: 1 0 33%;
-        margin: 0;
+        flex: 0 0 33%;
+    }
+}
+
+.playground__item--link {
+    position: relative;
+
+    padding: 2em 2em 1.8em;
+
+    font-size: rem-calc(26);
+    font-weight: 700;
+    color: $black;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1.2;
+
+    background: #f9f9f9;
+
+    transition: color .3s ease;
+
+    &:hover {
+        color: #86aedd;
     }
 }
 
 .playground__item__img {
     display: block;
     width: 100%;
+}
+
+.playground__item__tags {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 1rem 0 0;
+    padding: 1em;
+
+    font-size: rem-calc(12);
+    font-weight: 400;
+    text-align: center;
+    color: #ccc;
+    text-transform: uppercase;
 }
