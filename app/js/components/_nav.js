@@ -157,7 +157,7 @@ anatacreative.nav = function(undefined) {
 
         if (!hasActive) {
             if (targetUrl.indexOf('projects') > -1 || targetUrl.indexOf('projecten') > -1) {
-                mainNavLinks[1].classList.add('main-nav__item--active');
+                mainNavLinks[2].classList.add('main-nav__item--active');
             }
         }
     };

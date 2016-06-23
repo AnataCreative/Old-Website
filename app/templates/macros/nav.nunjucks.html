@@ -13,6 +13,9 @@
                 Menu
             </button>
             <div id="main-nav-mobile-container" class="main-nav__mobile-container">
+                <a href="{% if activeLang == 'nl' %}/nl/{% else %}/{% endif %}" class="js-main-nav-link js-nav-link main-nav__item main-nav__item--home{%if activePage == 'home' %} main-nav__item--active{% endif %}">
+                    Home
+                </a>
                 <a href="{% if activeLang == 'nl' %}/nl/projecten/{% else %}/projects/{% endif %}" class="js-main-nav-link js-nav-link main-nav__item{%if activePage == 'projects' %} main-nav__item--active{% endif %}">
                     {% if activeLang == 'nl' %}
                         Projecten

@@ -14,7 +14,9 @@
 /* Anata
    ========================================================================== */
 .full-logo__anata {
-
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .full-logo__path {
@@ -61,6 +63,11 @@
 /* Creative
    ========================================================================== */
 .full-logo__creative {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 15%;
+
     opacity: 0;
     transform: translate3d(0, 60%, 0);
 

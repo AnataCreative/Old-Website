@@ -172,11 +172,15 @@
    ========================================================================== */
 .project__footer {
     position: relative;
-    height: rem-calc(400);
+    height: rem-calc(200);
 
     overflow: hidden;
 
     background: $black;
+
+    @include media-breakpoint-up(md) {
+        height: rem-calc(400);
+    }
 }
 
 .project__footer__link {
@@ -208,7 +212,7 @@
     margin: 0;
     padding: 0 rem-calc(20);
 
-    font-size: rem-calc(30);
+    font-size: rem-calc(32);
     line-height: 1.2;
     text-align: center;
     color: $white;

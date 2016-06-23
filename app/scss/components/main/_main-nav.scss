@@ -153,8 +153,8 @@
     position: relative;
     display: block;
     width: 100%;
-    margin: 1rem 0;
-    padding: 0 0 1em;
+    margin: .5rem 0;
+    padding: 0 0 .5em;
 
     color: #a6a6ad;
     line-height: rem-calc(60);
@@ -203,6 +203,13 @@
 
     @include media-breakpoint-up(md) {
         padding: 0 2em;
+    }
+}
+
+.main-nav__item--home {
+
+    @include media-breakpoint-up(sm) {
+        display: none;
     }
 }
 
