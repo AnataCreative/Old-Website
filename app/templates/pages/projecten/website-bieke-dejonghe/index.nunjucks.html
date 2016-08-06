@@ -1,0 +1,89 @@
+{% set lang = "nl" %}
+{% set pageTitle = "Biekedejonghe.be - Projecten - " %}
+{% set pageTeaser = "Samen met Bieke hebben we een website in leven geroepen om haar eigen zaak ook online in de kijker te zetten. Deze heeft als doel de klanten sneller te informeren zodat ze vlugger een afspraak zullen maken." %}
+
+{% extends "layout.nunjucks.html" %}
+
+{% block nav %}
+    <!-- Nav -->
+    {% import 'macros/nav.nunjucks.html' as navigation %}
+    {{navigation.nav('projects','nl')}}
+{% endblock %}
+
+
+{% block content %}
+    <main role="main">
+        <!-- Header -->
+        <header class="project-header">
+            <figure>
+                <img src="/assets/img/projects/bieke-website/project-header.jpg" alt="Website Biekedejonghe.be - Anata Creative" title="Website Biekedejonghe.be - Anata Creative" class="project-header__img">
+                <figcaption class="project-header__caption">
+                    <h1 class="project-header__caption__title">
+                        Biekedejonghe.be
+                    </h1>
+                </figcaption>
+            </figure>
+        </header>
+
+        <article class="project">
+            <!-- Intro -->
+            <p class="project__intro">
+                Samen met Bieke hebben we een website in leven geroepen om haar eigen zaak ook online in de kijker te zetten. Deze heeft als doel de klanten sneller te informeren zodat ze vlugger een afspraak zullen maken.
+            </p>
+
+            <figure class="project__visuals">
+                <img src="/assets/img/projects/bieke-website/visual-12.jpg" alt="Website Bieke Dejonghe - Anata Creative" title="Website Bieke Dejonghe - Anata Creative" class="project__visuals__item">
+            </figure>
+
+            <!-- Responsive -->
+            <h2 class="sub-title">
+                <span class="sub-title__text">
+                    Werkt overal
+                </span>
+            </h2>
+
+            <p class="project__text">
+                Wij zorgen er ook voor dat uw website responsive is. Dit betekent dat deze op alle mogelijke schermen (zowel voor grote computerschermen als een smartphone of tablet) in een automatisch aangepast formaat, netjes wordt weergegeven.
+            </p>
+
+            <figure class="project__visuals">
+                <img src="/assets/img/projects/bieke-website/visual-14.jpg" alt="Website Bieke Dejonghe - Anata Creative" title="Website Bieke Dejonghe - Anata Creative" width="2000" height="2469" class="js-lazyload-img project__visuals__item project__visuals__item--max">
+            </figure>
+            <figure class="project__visuals project__visuals--grey">
+                <img src="/assets/img/projects/bieke-website/visual-11.png" alt="Website Bieke Dejonghe - Anata Creative" title="Website Bieke Dejonghe - Anata Creative" width="945" height="1195" class="js-lazyload-img project__visuals__item project__visuals__item--max">
+            </figure>
+
+
+            <!-- CMS -->
+            <h2 class="sub-title">
+                <span class="sub-title__text">
+                    Zeer gemakkelijk te beheren via Perch CMS
+                </span>
+            </h2>
+
+            <p class="project__text">
+                Door gebruik te maken van het lichte Perch CMS, is de site zeer gemakkelijk zelf te beheren terwijl hij supersnel blijft.
+            </p>
+
+            <figure class="project__visuals">
+                <img src="/assets/img/projects/bieke-website/visual-13.jpg" width="1981" height="1207" alt="Website Bieke Dejonghe - Anata Creative" title="Website Bieke Dejonghe - Anata Creative" class="js-lazyload-img project__visuals__item">
+            </figure>
+
+            <p class="project__text">
+                Bekijk het project op <a href="http://biekedejonghe.be" target="_blank">biekedejonghe.be</a>
+            </p>
+        </article>
+    </main>
+{% endblock %}
+
+
+{% block footer %}
+<footer class="project__footer">
+    <a href="/projecten/ksa-t-vlinderke/" class="js-nav-link project__footer__link">
+        <h2 class="project__footer__title">
+            <small class="project__footer__title__sm">Ontdek het volgende project</small>
+            KSA &lsquo;t Vlinderke
+        </h2>
+    </a>
+</footer>
+{% endblock %}

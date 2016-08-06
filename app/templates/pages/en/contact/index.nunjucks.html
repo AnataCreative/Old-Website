@@ -1,13 +1,13 @@
-{% set lang = "nl" %}
+{% set lang = "en" %}
 {% set pageTitle = "Contact - " %}
-{% set pageTeaser = "Hallo, laten we samen iets moois maken!" %}
+{% set pageTeaser = "Hi there, Let’s create something beautiful together!" %}
 
 {% extends "layout.nunjucks.html" %}
 
 {% block nav %}
     <!-- Nav -->
     {% import 'macros/nav.nunjucks.html' as navigation %}
-    {{navigation.nav('contact','nl')}}
+    {{navigation.nav('contact','en')}}
 {% endblock %}
 
 
@@ -21,8 +21,8 @@
         <article class="contact">
             <header>
                 <h2 class="intro intro--center contact__intro">
-                    Hallo, <br>
-                    laten we samen iets moois maken!
+                    Hi there, <br>
+                    Let’s create something beautiful together!
                 </h2>
             </header>
 
@@ -75,12 +75,12 @@
                     <header>
                         <h2 class="form__title">
                             <small class="form__title__sm">
-                                Ondek uw
+                                Discover your
                             </small>
-                            opportuniteiten
+                            Opportunities
                         </h2>
                         <p class="form__intro">
-                            Een project in gedachten? Wil je uw huidige site verbeteren of heb je een nieuwe nodig? Laat het ons weten en ontdek wat wij voor jou kunnen betekenen.
+                            Have a project in mind? Want to improve your current website or just build a new one? Let us know below and discover your opportunities.
                         </p>
                     </header>
 
@@ -88,14 +88,14 @@
                         <div class="row row--full">
                             <div class="col col--md-6 form-control">
                                 <label for="input-name" class="form-control__label">
-                                    Naam *
+                                    Name *
                                 </label>
                                 <input type="text" id="input-name" name="name" class="js-form-input form-control__input" required>
                                 <span class="form-control__indicator"></span>
                             </div>
                             <div class="col col--md-6 form-control">
                                 <label for="input-email" class="form-control__label">
-                                    E-mail *
+                                    Email *
                                 </label>
                                 <input type="email" id="input-email" name="email" class="js-form-input form-control__input" required>
                                 <span class="form-control__indicator"></span>
@@ -104,7 +104,7 @@
 
                         <div class="form-control">
                             <label for="input-message" class="form-control__label">
-                                Bericht *
+                                Message *
                             </label>
                             <textarea name="message" id="input-message" class="js-form-input form-control__input form-control__input--textarea" required></textarea>
                             <span class="form-control__indicator"></span>
@@ -115,28 +115,27 @@
 
                         <div class="form__error">
                             <img src="/assets/img/about/sad.svg" alt="Sad Man" class="form__error__icon">
-                            Whoops, er is iets mis gegaan. Kan je het eens opnieuw proberen?
+                            Whoops, something went wrong. Could you try that again please?
                         </div>
 
                         <div class="form__submit">
                             <button type="submit" id="form-submit" class="submit-btn">
-                                <span class="submit-btn__txt">Verzenden</span>
-                                <span class="submit-btn__txt-sending">Wordt verzonden...</span>
+                                <span class="submit-btn__txt">Send</span>
+                                <span class="submit-btn__txt-sending">Sending...</span>
                             </button>
                         </div>
                     </div>
                     <div class="form__success">
                         <img src="/assets/img/about/happy.svg" alt="Happy Man" class="form__success__icon">
                         <h2 class="form__success__title">
-                            Bedankt!
+                            Thanks!
                         </h2>
                         <p class="form__success__txt">
-                            Tof! We laten zo snel mogelijk iets van ons horen.
+                            Awesome! We will get back to you as soon as we can.
                         </p>
                     </div>
                 </form>
             </section>
-
         </article>
     </main>
 {% endblock %}
