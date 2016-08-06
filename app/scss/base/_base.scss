@@ -28,6 +28,71 @@ html {
 body {
     min-height: 100%;
     margin: 0;
+
+    &:before {
+        content: "Loading...";
+
+        z-index: -1;
+        position: fixed;
+        top: 55%;
+        left: 0;
+
+        display: block;
+        width: 100%;
+
+        font-size: 2vw;
+        text-align: center;
+        color: $black;
+        opacity: 0;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+
+        transition: none;
+        transform: translate3d(0, 10px, 0);
+
+        pointer-events: none;
+    }
+}
+
+.loading-icon {
+    z-index: -1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    display: block;
+    margin: 0 auto;
+    height: 120vh;
+    transform: translate3d(-50%, -40%, 0);
+
+    opacity: 0;
+    fill: #f5f5f5;
+
+    transition: none;
+
+    pointer-events: none;
+}
+
+.content-loading {
+
+    &:before {
+        z-index: 2;
+        opacity: 1;
+
+        transition: opacity 10s ease, transform 3s ease;
+        transition-delay: .6s;
+        transform: translate3d(0, 0, 0);
+    }
+
+    .loading-icon {
+        z-index: 1;
+        opacity: 1;
+
+        transition: opacity 3s ease, transform 10s ease;
+        transition-delay: .2s;
+
+        transform: translate3d(-50%, -55%, 0);
+    }
 }
 
 
