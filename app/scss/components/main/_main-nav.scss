@@ -137,11 +137,12 @@
 .main-nav__home-link__img {
     display: block;
     width: auto;
-    height: 100%;
-    margin: 0;
+    height: 80%;
+
+    margin-top: 10%;
 
     @include media-breakpoint-up(sm) {
-        margin: 0 auto;
+        margin: 10% auto 0;
     }
 }
 

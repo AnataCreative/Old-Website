@@ -8,7 +8,6 @@
     position: relative;
     overflow: hidden;
 
-    // background: #030306;
     height: rem-calc(259);
     border-bottom: 1px solid #f5f5f5;
 
@@ -33,11 +32,43 @@
     transform: translate3d(0, -50%, 0);
 }
 
-.home-header__title__logo {
+.home-header__title__logo__img {
+    display: block;
     max-width: rem-calc(120);
-    margin: 0 auto;
+    margin: 0 auto 2rem;
+
+    opacity: 0;
+
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 
     @include media-breakpoint-up(md) {
         max-width: rem-calc(190);
+    }
+}
+
+.home-header__title__logo__caption {
+    text-align: center;
+
+    opacity: 0;
+
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 10px, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
     }
 }
